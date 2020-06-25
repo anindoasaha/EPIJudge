@@ -1,5 +1,4 @@
 #include <vector>
-
 #include "test_framework/generic_test.h"
 #include "test_framework/serialization_traits.h"
 using std::vector;
@@ -12,10 +11,8 @@ int OptimumSubjectToCapacity(const vector<Item>& items, int capacity) {
   // TODO - you fill in here.
   return 0;
 }
-namespace test_framework {
 template <>
-struct SerializationTrait<Item> : UserSerTrait<Item, int, int> {};
-}  // namespace test_framework
+struct SerializationTraits<Item> : UserSerTraits<Item, int, int> {};
 
 int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};

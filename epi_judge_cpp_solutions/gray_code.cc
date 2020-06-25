@@ -1,48 +1,31 @@
 #include <algorithm>
-#include <memory>
-#include <unordered_set>
+#include <string>
 #include <vector>
 
 #include "test_framework/generic_test.h"
 #include "test_framework/test_failure.h"
 #include "test_framework/timed_executor.h"
 
-using std::make_unique;
-using std::unique_ptr;
-using std::unordered_set;
 using std::vector;
 
-bool DirectedGrayCode(int, unordered_set<int>*, vector<int>*);
-bool DiffersByOneBit(int, int);
-
 vector<int> GrayCode(int num_bits) {
-  vector<int> result({0});
-  DirectedGrayCode(num_bits,
-                   make_unique<unordered_set<int>>(unordered_set<int>{0}).get(),
-                   &result);
-  return result;
-}
-
-bool DirectedGrayCode(int num_bits, unordered_set<int>* history,
-                      vector<int>* result) {
-  if (size(*result) == (1 << num_bits)) {
-    // Check if the first and last codes differ by one bit.
-    return DiffersByOneBit(result->front(), result->back());
+  if (num_bits == 0) {
+    return {0};
   }
 
-  for (int i = 0; i < num_bits; ++i) {
-    int previous_code = result->back();
-    int candidate_next_code = previous_code ^ (1 << i);
-    if (history->emplace(candidate_next_code).second) {
-      result->emplace_back(candidate_next_code);
-      if (DirectedGrayCode(num_bits, history, result)) {
-        return true;
-      }
-      result->pop_back();
-      history->erase(candidate_next_code);
-    }
+  // These implicitly begin with 0 at bit-index (num_bits - 1).
+  vector<int> gray_code_num_bits_minus_1 = GrayCode(num_bits - 1);
+
+  // Now, add a 1 at bit-index (num_bits - 1) to all entries in
+  // grayCodeNumBitsMinus1.
+  int leading_bit_one = 1 << (num_bits - 1);
+  // Process in reverse order to achieve reflection of
+  // gray_code_num_bits_minus_1.
+  for (int i = size(gray_code_num_bits_minus_1) - 1; i >= 0; --i) {
+    gray_code_num_bits_minus_1.emplace_back(leading_bit_one |
+                                            gray_code_num_bits_minus_1[i]);
   }
-  return false;
+  return gray_code_num_bits_minus_1;
 }
 
 bool DiffersByOneBit(int x, int y) {
@@ -59,7 +42,7 @@ void GrayCodeWrapper(TimedExecutor& executor, int num_bits) {
                       std::to_string(expected_size) + ", got " +
                       std::to_string(result.size()));
   }
-  for (int i = 1; i < result.size(); i++)
+  for (size_t i = 1; i < result.size(); i++)
     if (!DiffersByOneBit(result[i - 1], result[i])) {
       if (result[i - 1] == result[i]) {
         throw TestFailure("Two adjacent entries are equal");

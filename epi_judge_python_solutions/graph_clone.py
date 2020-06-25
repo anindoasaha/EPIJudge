@@ -1,19 +1,18 @@
 import collections
-from typing import List
 
 from test_framework import generic_test
 from test_framework.test_failure import TestFailure
 
 
 class GraphVertex:
-    def __init__(self, label: int) -> None:
+    def __init__(self, label):
         self.label = label
-        self.edges: List['GraphVertex'] = []
+        self.edges = []
 
 
-def clone_graph(graph: GraphVertex) -> GraphVertex:
+def clone_graph(graph):
 
-    if graph is None:
+    if not graph:
         return None
 
     q = collections.deque([graph])
@@ -72,5 +71,5 @@ def clone_graph_test(k, edges):
 
 if __name__ == '__main__':
     exit(
-        generic_test.generic_test_main('graph_clone.py', 'graph_clone.tsv',
+        generic_test.generic_test_main("graph_clone.py", 'graph_clone.tsv',
                                        clone_graph_test))

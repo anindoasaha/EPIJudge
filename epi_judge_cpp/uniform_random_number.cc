@@ -1,7 +1,6 @@
 #include <functional>
 #include <random>
 #include <vector>
-
 #include "test_framework/generic_test.h"
 #include "test_framework/random_sequence_checker.h"
 #include "test_framework/timed_executor.h"
@@ -22,7 +21,6 @@ int UniformRandom(int lower_bound, int upper_bound) {
 }
 bool UniformRandomRunner(TimedExecutor& executor, int lower_bound,
                          int upper_bound) {
-  using namespace test_framework;
   vector<int> result;
   executor.Run([&] {
     std::generate_n(back_inserter(result), 100000,

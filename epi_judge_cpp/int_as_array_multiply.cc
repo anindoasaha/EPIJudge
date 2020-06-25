@@ -1,5 +1,4 @@
 #include <vector>
-
 #include "test_framework/generic_test.h"
 using std::vector;
 vector<int> Multiply(vector<int> num1, vector<int> num2) {

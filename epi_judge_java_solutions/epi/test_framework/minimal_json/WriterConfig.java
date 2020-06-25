@@ -24,7 +24,7 @@ public abstract class WriterConfig {
    * indentation of two
    * spaces.
    */
-  public static WriterConfig PRETTY_PRINT = PrettyPrint.indentWithSpaces(4);
+  public static WriterConfig PRETTY_PRINT = PrettyPrint.indentWithSpaces(2);
 
   abstract JsonWriter createWriter(Writer writer);
 }

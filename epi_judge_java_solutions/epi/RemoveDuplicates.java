@@ -69,7 +69,8 @@ public class RemoveDuplicates {
   }
 
   @EpiTestComparator
-  public static boolean comp(List<String> expected, List<Name> result) {
+  public static BiPredicate<List<String>, List<Name>> comp =
+      (expected, result) -> {
     if (result == null) {
       return false;
     }
@@ -84,7 +85,7 @@ public class RemoveDuplicates {
       }
     }
     return true;
-  }
+  };
 
   @EpiTestExpectedType public static List<String> expectedType;
 

@@ -1,9 +1,7 @@
-from typing import List
-
 from test_framework import generic_test
 
 
-def longest_contained_range(A: List[int]) -> int:
+def longest_contained_range(A):
 
     # unprocessed_entries records the existence of each entry in A.
     unprocessed_entries = set(A)
@@ -31,6 +29,6 @@ def longest_contained_range(A: List[int]) -> int:
 
 if __name__ == '__main__':
     exit(
-        generic_test.generic_test_main('longest_contained_interval.py',
+        generic_test.generic_test_main("longest_contained_interval.py",
                                        'longest_contained_interval.tsv',
                                        longest_contained_range))

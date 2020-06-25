@@ -1,6 +1,5 @@
 #include <tuple>
 #include <vector>
-
 #include "test_framework/fmt_print.h"
 #include "test_framework/generic_test.h"
 #include "test_framework/serialization_traits.h"
@@ -14,11 +13,9 @@ vector<PairedTasks> OptimumTaskAssignment(vector<int> task_durations) {
   // TODO - you fill in here.
   return {};
 }
-
-namespace test_framework {
 template <>
-struct SerializationTrait<PairedTasks> : UserSerTrait<PairedTasks, int, int> {};
-}  // namespace test_framework
+struct SerializationTraits<PairedTasks> : UserSerTraits<PairedTasks, int, int> {
+};
 
 bool operator==(const PairedTasks& lhs, const PairedTasks& rhs) {
   return std::tie(lhs.task_1, lhs.task_2) == std::tie(rhs.task_1, rhs.task_2);

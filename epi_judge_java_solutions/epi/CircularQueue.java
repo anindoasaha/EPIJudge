@@ -38,10 +38,13 @@ public class CircularQueue {
 
     public Integer dequeue() {
 
-      --numQueueElements;
-      Integer result = entries[head];
-      head = (head + 1) % entries.length;
-      return result;
+      if (numQueueElements != 0) {
+        --numQueueElements;
+        Integer result = entries[head];
+        head = (head + 1) % entries.length;
+        return result;
+      }
+      throw new NoSuchElementException("Dequeue called on an empty queue.");
     }
 
     public int size() { return numQueueElements; }
@@ -72,7 +75,7 @@ public class CircularQueue {
   }
 
   @EpiTest(testDataFile = "circular_queue.tsv")
-  public static void queueTester(List<QueueOp> ops) throws TestFailure {
+  public static void queueTest(List<QueueOp> ops) throws TestFailure {
     Queue q = new Queue(1);
     int opIdx = 0;
     for (QueueOp op : ops) {

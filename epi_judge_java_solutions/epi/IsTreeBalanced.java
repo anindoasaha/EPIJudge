@@ -25,16 +25,16 @@ public class IsTreeBalanced {
   private static BalanceStatusWithHeight
   checkBalanced(BinaryTreeNode<Integer> tree) {
     if (tree == null) {
-      return new BalanceStatusWithHeight(/*balanced=*/true, /*height=*/-1);
+      return new BalanceStatusWithHeight(true, -1); // Base case.
     }
 
     BalanceStatusWithHeight leftResult = checkBalanced(tree.left);
     if (!leftResult.balanced) {
-      return leftResult;
+      return leftResult; // Left subtree is not balanced.
     }
     BalanceStatusWithHeight rightResult = checkBalanced(tree.right);
     if (!rightResult.balanced) {
-      return rightResult;
+      return rightResult; // Right subtree is not balanced.
     }
 
     boolean isBalanced = Math.abs(leftResult.height - rightResult.height) <= 1;

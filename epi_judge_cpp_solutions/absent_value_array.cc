@@ -22,7 +22,7 @@ int FindMissingElement(vector<int>::const_iterator stream_begin,
 
   // Look for a bucket that contains less than (1 << 16) elements.
   const int kBucketCapacity = 1 << 16;
-  int candidate_bucket = 0;
+  int candidate_bucket;
   for (int i = 0; i < kNumBucket; ++i) {
     if (counter[i] < kBucketCapacity) {
       candidate_bucket = i;
@@ -53,14 +53,11 @@ int FindMissingElement(vector<int>::const_iterator stream_begin,
   throw invalid_argument("no missing element");
 }
 
-void FindMissingElementWrapper(const vector<int>& stream) {
+int FindMissingElementWrapper(const vector<int>& stream) {
   try {
-    int res = FindMissingElement(cbegin(stream), cend(stream));
-    if (std::find(stream.begin(), stream.end(), res) != stream.end()) {
-      throw TestFailure(std::to_string(res) + " appears in stream");
-    }
+    return FindMissingElement(cbegin(stream), cend(stream));
   } catch (invalid_argument&) {
-    throw TestFailure("Unexpected no missing element exception");
+    throw TestFailure("Unexpected no_missing_element exception");
   }
 }
 

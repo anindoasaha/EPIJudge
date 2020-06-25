@@ -1,12 +1,10 @@
-from typing import List
-
 from test_framework import generic_test, test_utils
 
 
-def combinations(n: int, k: int) -> List[List[int]]:
+def combinations(n, k):
     def directed_combinations(offset, partial_combination):
         if len(partial_combination) == k:
-            result.append(partial_combination.copy())
+            result.append(list(partial_combination))
             return
 
         # Generate remaining combinations over {offset, ..., n - 1} of size
@@ -17,7 +15,7 @@ def combinations(n: int, k: int) -> List[List[int]]:
             directed_combinations(i + 1, partial_combination + [i])
             i += 1
 
-    result: List[List[int]] = []
+    result = []
     directed_combinations(1, [])
     return result
 
@@ -33,7 +31,7 @@ def combinations_pythonic(n, k):
 if __name__ == '__main__':
     exit(
         generic_test.generic_test_main(
-            'combinations.py',
+            "combinations.py",
             'combinations.tsv',
             combinations,
             comparator=test_utils.unordered_compare))

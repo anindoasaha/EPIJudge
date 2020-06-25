@@ -1,5 +1,4 @@
 #include <vector>
-
 #include "binary_tree_node.h"
 #include "test_framework/generic_test.h"
 using std::vector;

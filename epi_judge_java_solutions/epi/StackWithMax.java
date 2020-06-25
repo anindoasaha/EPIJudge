@@ -30,9 +30,21 @@ public class StackWithMax {
 
     public boolean empty() { return elementWithCachedMax.isEmpty(); }
 
-    public Integer max() { return elementWithCachedMax.peek().max; }
+    public Integer max() {
 
-    public Integer pop() { return elementWithCachedMax.removeFirst().element; }
+      if (empty()) {
+        throw new IllegalStateException("max(): empty stack");
+      }
+      return elementWithCachedMax.peek().max;
+    }
+
+    public Integer pop() {
+
+      if (empty()) {
+        throw new IllegalStateException("pop(): empty stack");
+      }
+      return elementWithCachedMax.removeFirst().element;
+    }
 
     public void push(Integer x) {
 
@@ -53,7 +65,7 @@ public class StackWithMax {
   }
 
   @EpiTest(testDataFile = "stack_with_max.tsv")
-  public static void stackTester(List<StackOp> ops) throws TestFailure {
+  public static void stackTest(List<StackOp> ops) throws TestFailure {
     try {
       Stack s = new Stack();
       int result;

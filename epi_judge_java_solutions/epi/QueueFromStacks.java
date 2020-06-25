@@ -27,7 +27,11 @@ public class QueueFromStacks {
           dequeue.addFirst(enqueue.removeFirst());
         }
       }
-      return dequeue.removeFirst();
+
+      if (!dequeue.isEmpty()) {
+        return dequeue.removeFirst();
+      }
+      throw new NoSuchElementException("Cannot pop empty queue");
     }
   }
 
@@ -43,7 +47,7 @@ public class QueueFromStacks {
   }
 
   @EpiTest(testDataFile = "queue_from_stacks.tsv")
-  public static void queueTester(List<QueueOp> ops) throws TestFailure {
+  public static void queueTest(List<QueueOp> ops) throws TestFailure {
     try {
       Queue q = new Queue();
 

@@ -1,6 +1,6 @@
-problem_mapping = {
-    "Chapter 04: Primitive Types": {
-        "4.00 Bootcamp: Primitive Types": {
+run({
+    "Primitive Types": {
+        "Bootcamp: Primitive Types": {
             "C++: count_bits.cc": {
                 "passed": 0,
                 "total": 10001
@@ -14,7 +14,7 @@ problem_mapping = {
                 "total": 10001
             }
         },
-        "4.01 Computing the parity of a word": {
+        "Computing the parity of a word": {
             "C++: parity.cc": {
                 "passed": 0,
                 "total": 10000
@@ -28,7 +28,7 @@ problem_mapping = {
                 "total": 10000
             }
         },
-        "4.02 Swap bits": {
+        "Swap bits": {
             "C++: swap_bits.cc": {
                 "passed": 0,
                 "total": 10001
@@ -42,7 +42,7 @@ problem_mapping = {
                 "total": 10001
             }
         },
-        "4.03 Reverse bits": {
+        "Reverse bits": {
             "C++: reverse_bits.cc": {
                 "passed": 0,
                 "total": 10000
@@ -56,7 +56,7 @@ problem_mapping = {
                 "total": 10000
             }
         },
-        "4.04 Find a closest integer with the same weight": {
+        "Find a closest integer with the same weight": {
             "C++: closest_int_same_weight.cc": {
                 "passed": 0,
                 "total": 10000
@@ -65,12 +65,12 @@ problem_mapping = {
                 "passed": 0,
                 "total": 10000
             },
-            "Python: closest_int_same_weight.py": { 
+            "Python: closest_int_same_weight.py": {
                 "passed": 0,
                 "total": 10000
             }
         },
-        "4.05 Compute product without arithmetical operators": {
+        "Compute x * y without arithmetical operators": {
             "C++: primitive_multiply.cc": {
                 "passed": 0,
                 "total": 10006
@@ -84,7 +84,7 @@ problem_mapping = {
                 "total": 10006
             }
         },
-        "4.06 Compute quotient without arithmetical operators": {
+        "Compute x/y": {
             "C++: primitive_divide.cc": {
                 "passed": 0,
                 "total": 10000
@@ -98,7 +98,7 @@ problem_mapping = {
                 "total": 10000
             }
         },
-        "4.07 Compute pow(x,y)": {
+        "Compute x^y": {
             "C++: power_x_y.cc": {
                 "passed": 0,
                 "total": 10002
@@ -112,7 +112,7 @@ problem_mapping = {
                 "total": 10002
             }
         },
-        "4.08 Reverse digits": {
+        "Reverse digits": {
             "C++: reverse_digits.cc": {
                 "passed": 0,
                 "total": 19952
@@ -126,7 +126,7 @@ problem_mapping = {
                 "total": 19952
             }
         },
-        "4.09 Check if a decimal integer is a palindrome": {
+        "Check if a decimal integer is a palindrome": {
             "C++: is_number_palindromic.cc": {
                 "passed": 0,
                 "total": 20000
@@ -140,7 +140,7 @@ problem_mapping = {
                 "total": 20000
             }
         },
-        "4.10 Generate uniform random numbers": {
+        "Generate uniform random numbers": {
             "C++: uniform_random_number.cc": {
                 "passed": 0,
                 "total": 7
@@ -154,7 +154,7 @@ problem_mapping = {
                 "total": 7
             }
         },
-        "4.11 Rectangle intersection": {
+        "Rectangle intersection": {
             "C++: rectangle_intersection.cc": {
                 "passed": 0,
                 "total": 10000
@@ -169,8 +169,8 @@ problem_mapping = {
             }
         }
     },
-    "Chapter 05: Arrays": {
-        "5.00 Bootcamp: Arrays": {
+    "Arrays": {
+        "Bootcamp: Arrays": {
             "C++: even_odd_array.cc": {
                 "passed": 0,
                 "total": 1001
@@ -184,7 +184,7 @@ problem_mapping = {
                 "total": 1001
             }
         },
-        "5.01 The Dutch national flag problem": {
+        "The Dutch national flag problem": {
             "C++: dutch_national_flag.cc": {
                 "passed": 0,
                 "total": 204
@@ -198,7 +198,7 @@ problem_mapping = {
                 "total": 204
             }
         },
-        "5.02 Increment an arbitrary-precision integer": {
+        "Increment an arbitrary-precision integer": {
             "C++: int_as_array_increment.cc": {
                 "passed": 0,
                 "total": 505
@@ -212,7 +212,7 @@ problem_mapping = {
                 "total": 505
             }
         },
-        "5.03 Multiply two arbitrary-precision integers": {
+        "Multiply two arbitrary-precision integers": {
             "C++: int_as_array_multiply.cc": {
                 "passed": 0,
                 "total": 1000
@@ -226,7 +226,7 @@ problem_mapping = {
                 "total": 1000
             }
         },
-        "5.04 Advancing through an array": {
+        "Advancing through an array": {
             "C++: advance_by_offsets.cc": {
                 "passed": 0,
                 "total": 2004
@@ -240,7 +240,7 @@ problem_mapping = {
                 "total": 2004
             }
         },
-        "5.05 Delete duplicates from a sorted array": {
+        "Delete duplicates from a sorted array": {
             "C++: sorted_array_remove_dups.cc": {
                 "passed": 0,
                 "total": 2003
@@ -254,7 +254,7 @@ problem_mapping = {
                 "total": 2003
             }
         },
-        "5.06 Buy and sell a stock once": {
+        "Buy and sell a stock once": {
             "C++: buy_and_sell_stock.cc": {
                 "passed": 0,
                 "total": 402
@@ -268,7 +268,7 @@ problem_mapping = {
                 "total": 402
             }
         },
-        "5.07 Buy and sell a stock twice": {
+        "Buy and sell a stock twice": {
             "C++: buy_and_sell_stock_twice.cc": {
                 "passed": 0,
                 "total": 402
@@ -282,7 +282,7 @@ problem_mapping = {
                 "total": 402
             }
         },
-        "5.08 Computing an alternation": {
+        "Computing an alternation": {
             "C++: alternating_array.cc": {
                 "passed": 0,
                 "total": 203
@@ -296,7 +296,7 @@ problem_mapping = {
                 "total": 203
             }
         },
-        "5.09 Enumerate all primes to n": {
+        "Enumerate all primes to n": {
             "C++: prime_sieve.cc": {
                 "passed": 0,
                 "total": 24
@@ -310,7 +310,7 @@ problem_mapping = {
                 "total": 24
             }
         },
-        "5.10 Permute the elements of an array": {
+        "Permute the elements of an array": {
             "C++: apply_permutation.cc": {
                 "passed": 0,
                 "total": 101
@@ -324,7 +324,7 @@ problem_mapping = {
                 "total": 101
             }
         },
-        "5.11 Compute the next permutation": {
+        "Compute the next permutation": {
             "C++: next_permutation.cc": {
                 "passed": 0,
                 "total": 2001
@@ -338,7 +338,7 @@ problem_mapping = {
                 "total": 2001
             }
         },
-        "5.12 Sample offline data": {
+        "Sample offline data": {
             "C++: offline_sampling.cc": {
                 "passed": 0,
                 "total": 8
@@ -352,7 +352,7 @@ problem_mapping = {
                 "total": 8
             }
         },
-        "5.13 Sample online data": {
+        "Sample online data": {
             "C++: online_sampling.cc": {
                 "passed": 0,
                 "total": 7
@@ -366,7 +366,7 @@ problem_mapping = {
                 "total": 7
             }
         },
-        "5.14 Compute a random permutation": {
+        "Compute a random permutation": {
             "C++: random_permutation.cc": {
                 "passed": 0,
                 "total": 6
@@ -380,7 +380,7 @@ problem_mapping = {
                 "total": 6
             }
         },
-        "5.15 Compute a random subset": {
+        "Compute a random subset": {
             "C++: random_subset.cc": {
                 "passed": 0,
                 "total": 9
@@ -394,7 +394,7 @@ problem_mapping = {
                 "total": 9
             }
         },
-        "5.16 Generate nonuniform random numbers": {
+        "Generate nonuniform random numbers": {
             "C++: nonuniform_random_number.cc": {
                 "passed": 0,
                 "total": 10
@@ -408,7 +408,7 @@ problem_mapping = {
                 "total": 10
             }
         },
-        "5.17 The Sudoku checker problem": {
+        "The Sudoku checker problem": {
             "C++: is_valid_sudoku.cc": {
                 "passed": 0,
                 "total": 745
@@ -422,21 +422,21 @@ problem_mapping = {
                 "total": 745
             }
         },
-        "5.18 Compute the spiral ordering of a 2D array": {
-            "C++: spiral_ordering.cc": {
+        "Compute the spiral ordering of a 2D array": {
+            "C++: spiral_ordering_segments.cc": {
                 "passed": 0,
                 "total": 51
             },
-            "Java: SpiralOrdering.java": {
+            "Java: SpiralOrderingSegments.java": {
                 "passed": 0,
                 "total": 51
             },
-            "Python: spiral_ordering.py": {
+            "Python: spiral_ordering_segments.py": {
                 "passed": 0,
                 "total": 51
             }
         },
-        "5.19 Rotate a 2D array": {
+        "Rotate a 2D array": {
             "C++: matrix_rotation.cc": {
                 "passed": 0,
                 "total": 51
@@ -450,7 +450,7 @@ problem_mapping = {
                 "total": 51
             }
         },
-        "5.20 Compute rows in Pascal's Triangle": {
+        "Compute rows in Pascal's Triangle": {
             "C++: pascal_triangle.cc": {
                 "passed": 0,
                 "total": 35
@@ -465,50 +465,37 @@ problem_mapping = {
             }
         }
     },
-    "Chapter 06: Strings": {
-        "6.00 Bootcamp: Strings": {
-            "C++: is_string_palindromic.cc": {
-                "passed": 0,
-                "total": 10000
-            },
-            "Java: IsStringPalindromic.java": {
-                "passed": 0,
-                "total": 10000
-            },
-            "Python: is_string_palindromic.py": {
-                "passed": 0,
-                "total": 10000
-            }
-        },
-        "6.01 Interconvert strings and integers": {
+    "Strings": {
+        "Bootcamp: Strings": {},
+        "Interconvert strings and integers": {
             "C++: string_integer_interconversion.cc": {
                 "passed": 0,
-                "total": 15002
+                "total": 10001
             },
             "Java: StringIntegerInterconversion.java": {
                 "passed": 0,
-                "total": 15002
+                "total": 10001
             },
             "Python: string_integer_interconversion.py": {
                 "passed": 0,
-                "total": 15002
+                "total": 10001
             }
         },
-        "6.02 Base conversion": {
+        "Base conversion": {
             "C++: convert_base.cc": {
                 "passed": 0,
-                "total": 20001
+                "total": 20010
             },
             "Java: ConvertBase.java": {
                 "passed": 0,
-                "total": 20001
+                "total": 20010
             },
             "Python: convert_base.py": {
                 "passed": 0,
-                "total": 20001
+                "total": 20010
             }
         },
-        "6.03 Compute the spreadsheet column encoding": {
+        "Compute the spreadsheet column encoding": {
             "C++: spreadsheet_encoding.cc": {
                 "passed": 0,
                 "total": 10000
@@ -522,7 +509,7 @@ problem_mapping = {
                 "total": 10000
             }
         },
-        "6.04 Replace and remove": {
+        "Replace and remove": {
             "C++: replace_and_remove.cc": {
                 "passed": 0,
                 "total": 501
@@ -536,7 +523,7 @@ problem_mapping = {
                 "total": 501
             }
         },
-        "6.05 Test palindromicity": {
+        "Test palindromicity": {
             "C++: is_string_palindromic_punctuation.cc": {
                 "passed": 0,
                 "total": 305
@@ -550,7 +537,7 @@ problem_mapping = {
                 "total": 305
             }
         },
-        "6.06 Reverse all the words in a sentence": {
+        "Reverse all the words in a sentence": {
             "C++: reverse_words.cc": {
                 "passed": 0,
                 "total": 103
@@ -564,7 +551,21 @@ problem_mapping = {
                 "total": 103
             }
         },
-        "6.07 The look-and-say problem": {
+        "Compute all mnemonics for a phone number": {
+            "C++: phone_number_mnemonic.cc": {
+                "passed": 0,
+                "total": 102
+            },
+            "Java: PhoneNumberMnemonic.java": {
+                "passed": 0,
+                "total": 102
+            },
+            "Python: phone_number_mnemonic.py": {
+                "passed": 0,
+                "total": 102
+            }
+        },
+        "The look-and-say problem": {
             "C++: look_and_say.cc": {
                 "passed": 0,
                 "total": 40
@@ -578,7 +579,7 @@ problem_mapping = {
                 "total": 40
             }
         },
-        "6.08 Convert from Roman to decimal": {
+        "Convert from Roman to decimal": {
             "C++: roman_to_integer.cc": {
                 "passed": 0,
                 "total": 3999
@@ -592,21 +593,21 @@ problem_mapping = {
                 "total": 3999
             }
         },
-        "6.09 Compute all valid IP addresses": {
+        "Compute all valid IP addresses": {
             "C++: valid_ip_addresses.cc": {
                 "passed": 0,
-                "total": 10008
+                "total": 10012
             },
             "Java: ValidIpAddresses.java": {
                 "passed": 0,
-                "total": 10008
+                "total": 10012
             },
             "Python: valid_ip_addresses.py": {
                 "passed": 0,
-                "total": 10008
+                "total": 10012
             }
         },
-        "6.10 Write a string sinusoidally": {
+        "Write a string sinusoidally": {
             "C++: snake_string.cc": {
                 "passed": 0,
                 "total": 500
@@ -620,7 +621,7 @@ problem_mapping = {
                 "total": 500
             }
         },
-        "6.11 Implement run-length encoding": {
+        "Implement run-length encoding": {
             "C++: run_length_compression.cc": {
                 "passed": 0,
                 "total": 200
@@ -634,7 +635,7 @@ problem_mapping = {
                 "total": 200
             }
         },
-        "6.12 Find the first occurrence of a substring": {
+        "Find the first occurrence of a substring": {
             "C++: substring_match.cc": {
                 "passed": 0,
                 "total": 835
@@ -649,46 +650,46 @@ problem_mapping = {
             }
         }
     },
-    "Chapter 07: Linked Lists": {
-        "7.00 Bootcamp: Linked Lists": {
-            "C++: delete_from_list.cc": {
-                "passed": 0,
-                "total": 457
-            },
-            "C++: insert_in_list.cc": {
-                "passed": 0,
-                "total": 504
-            },
+    "Linked Lists": {
+        "Bootcamp: Linked Lists": {
             "C++: search_in_list.cc": {
                 "passed": 0,
                 "total": 505
-            },
-            "Java: DeleteFromList.java": {
-                "passed": 0,
-                "total": 457
-            },
-            "Java: InsertInList.java": {
-                "passed": 0,
-                "total": 504
             },
             "Java: SearchInList.java": {
                 "passed": 0,
                 "total": 505
             },
-            "Python: delete_from_list.py": {
+            "Python: search_in_list.py": {
                 "passed": 0,
-                "total": 457
+                "total": 505
+            },
+            "C++: insert_in_list.cc": {
+                "passed": 0,
+                "total": 504
+            },
+            "Java: InsertInList.java": {
+                "passed": 0,
+                "total": 504
             },
             "Python: insert_in_list.py": {
                 "passed": 0,
                 "total": 504
             },
-            "Python: search_in_list.py": {
+            "C++: delete_from_list.cc": {
                 "passed": 0,
-                "total": 505
+                "total": 457
+            },
+            "Java: DeleteFromList.java": {
+                "passed": 0,
+                "total": 457
+            },
+            "Python: delete_from_list.py": {
+                "passed": 0,
+                "total": 457
             }
         },
-        "7.01 Merge two sorted lists": {
+        "Merge two sorted lists": {
             "C++: sorted_lists_merge.cc": {
                 "passed": 0,
                 "total": 501
@@ -702,7 +703,7 @@ problem_mapping = {
                 "total": 501
             }
         },
-        "7.02 Reverse a single sublist": {
+        "Reverse a single sublist": {
             "C++: reverse_sublist.cc": {
                 "passed": 0,
                 "total": 210
@@ -716,7 +717,7 @@ problem_mapping = {
                 "total": 210
             }
         },
-        "7.03 Test for cyclicity": {
+        "Test for cyclicity": {
             "C++: is_list_cyclic.cc": {
                 "passed": 0,
                 "total": 102
@@ -730,7 +731,7 @@ problem_mapping = {
                 "total": 102
             }
         },
-        "7.04 Test for overlapping lists---lists are cycle-free": {
+        "Test for overlapping lists - lists are cycle-free": {
             "C++: do_terminated_lists_overlap.cc": {
                 "passed": 0,
                 "total": 106
@@ -744,7 +745,7 @@ problem_mapping = {
                 "total": 106
             }
         },
-        "7.05 Test for overlapping lists---lists may have cycles": {
+        "Test for overlapping lists - lists may have cycles": {
             "C++: do_lists_overlap.cc": {
                 "passed": 0,
                 "total": 120
@@ -758,7 +759,7 @@ problem_mapping = {
                 "total": 120
             }
         },
-        "7.06 Delete a node from a singly linked list": {
+        "Delete a node from a singly linked list": {
             "C++: delete_node_from_list.cc": {
                 "passed": 0,
                 "total": 512
@@ -772,7 +773,7 @@ problem_mapping = {
                 "total": 512
             }
         },
-        "7.07 Remove the kth last element from a list": {
+        "Remove the kth last element from a list": {
             "C++: delete_kth_last_from_list.cc": {
                 "passed": 0,
                 "total": 306
@@ -786,7 +787,7 @@ problem_mapping = {
                 "total": 306
             }
         },
-        "7.08 Remove duplicates from a sorted list": {
+        "Remove duplicates from a sorted list": {
             "C++: remove_duplicates_from_sorted_list.cc": {
                 "passed": 0,
                 "total": 203
@@ -800,7 +801,7 @@ problem_mapping = {
                 "total": 203
             }
         },
-        "7.09 Implement cyclic right shift for singly linked lists": {
+        "Implement cyclic right shift for singly linked lists": {
             "C++: list_cyclic_right_shift.cc": {
                 "passed": 0,
                 "total": 507
@@ -814,7 +815,7 @@ problem_mapping = {
                 "total": 507
             }
         },
-        "7.10 Implement even-odd merge": {
+        "Implement even-odd merge": {
             "C++: even_odd_list_merge.cc": {
                 "passed": 0,
                 "total": 1015
@@ -828,7 +829,7 @@ problem_mapping = {
                 "total": 1015
             }
         },
-        "7.11 Test whether a singly linked list is palindromic": {
+        "Test whether a singly linked list is palindromic": {
             "C++: is_list_palindromic.cc": {
                 "passed": 0,
                 "total": 203
@@ -842,7 +843,7 @@ problem_mapping = {
                 "total": 203
             }
         },
-        "7.12 Implement list pivoting": {
+        "Implement list pivoting": {
             "C++: pivot_list.cc": {
                 "passed": 0,
                 "total": 208
@@ -856,7 +857,7 @@ problem_mapping = {
                 "total": 208
             }
         },
-        "7.13 Add list-based integers": {
+        "Add list-based integers": {
             "C++: int_as_list_add.cc": {
                 "passed": 0,
                 "total": 2002
@@ -871,8 +872,9 @@ problem_mapping = {
             }
         }
     },
-    "Chapter 08: Stacks and Queues": {
-        "8.01 Implement a stack with max API": {
+    "Stacks and Queues": {
+        "Bootcamp: Stacks and Queues": {},
+        "Implement a stack with max API": {
             "C++: stack_with_max.cc": {
                 "passed": 0,
                 "total": 101
@@ -886,7 +888,7 @@ problem_mapping = {
                 "total": 101
             }
         },
-        "8.02 Evaluate RPN expressions": {
+        "Evaluate RPN expressions": {
             "C++: evaluate_rpn.cc": {
                 "passed": 0,
                 "total": 108
@@ -900,7 +902,7 @@ problem_mapping = {
                 "total": 108
             }
         },
-        "8.03 Is a string well-formed?": {
+        "Test a string over ''{,},(,),[,]'' for well-formedness": {
             "C++: is_valid_parenthesization.cc": {
                 "passed": 0,
                 "total": 78
@@ -914,7 +916,7 @@ problem_mapping = {
                 "total": 78
             }
         },
-        "8.04 Normalize pathnames": {
+        "Normalize pathnames": {
             "C++: directory_path_normalization.cc": {
                 "passed": 0,
                 "total": 255
@@ -928,7 +930,7 @@ problem_mapping = {
                 "total": 255
             }
         },
-        "8.05 Compute buildings with a sunset view": {
+        "Compute buildings with a sunset view": {
             "C++: sunset_view.cc": {
                 "passed": 0,
                 "total": 101
@@ -942,7 +944,7 @@ problem_mapping = {
                 "total": 101
             }
         },
-        "8.06 Compute binary tree nodes in order of increasing depth": {
+        "Compute binary tree nodes in order of increasing depth": {
             "C++: tree_level_order.cc": {
                 "passed": 0,
                 "total": 3852
@@ -956,7 +958,7 @@ problem_mapping = {
                 "total": 3852
             }
         },
-        "8.07 Implement a circular queue": {
+        "Implement a circular queue": {
             "C++: circular_queue.cc": {
                 "passed": 0,
                 "total": 65
@@ -970,7 +972,7 @@ problem_mapping = {
                 "total": 65
             }
         },
-        "8.08 Implement a queue using stacks": {
+        "Implement a queue using stacks": {
             "C++: queue_from_stacks.cc": {
                 "passed": 0,
                 "total": 65
@@ -984,7 +986,7 @@ problem_mapping = {
                 "total": 65
             }
         },
-        "8.09 Implement a queue with max API": {
+        "Implement a queue with max API": {
             "C++: queue_with_max.cc": {
                 "passed": 0,
                 "total": 201
@@ -999,8 +1001,9 @@ problem_mapping = {
             }
         }
     },
-    "Chapter 09: Binary Trees": {
-        "9.01 Test if a binary tree is height-balanced": {
+    "Binary Trees": {
+        "Bootcamp: Binary Trees": {},
+        "Test if a binary tree is height-balanced": {
             "C++: is_tree_balanced.cc": {
                 "passed": 0,
                 "total": 3852
@@ -1014,7 +1017,7 @@ problem_mapping = {
                 "total": 3852
             }
         },
-        "9.02 Test if a binary tree is symmetric": {
+        "Test if a binary tree is symmetric": {
             "C++: is_tree_symmetric.cc": {
                 "passed": 0,
                 "total": 3852
@@ -1028,7 +1031,7 @@ problem_mapping = {
                 "total": 3852
             }
         },
-        "9.03 Compute the lowest common ancestor in a binary tree": {
+        "Compute the lowest common ancestor in a binary tree": {
             "C++: lowest_common_ancestor.cc": {
                 "passed": 0,
                 "total": 948
@@ -1042,7 +1045,7 @@ problem_mapping = {
                 "total": 948
             }
         },
-        "9.04 Compute the LCA when nodes have parent pointers": {
+        "Compute the LCA when nodes have parent pointers": {
             "C++: lowest_common_ancestor_with_parent.cc": {
                 "passed": 0,
                 "total": 948
@@ -1056,7 +1059,7 @@ problem_mapping = {
                 "total": 948
             }
         },
-        "9.05 Sum the root-to-leaf paths in a binary tree": {
+        "Sum the root-to-leaf paths in a binary tree": {
             "C++: sum_root_to_leaf.cc": {
                 "passed": 0,
                 "total": 3849
@@ -1070,21 +1073,21 @@ problem_mapping = {
                 "total": 3849
             }
         },
-        "9.06 Find a root to leaf path with specified sum": {
+        "Find a root to leaf path with specified sum": {
             "C++: path_sum.cc": {
                 "passed": 0,
-                "total": 7690
+                "total": 7688
             },
             "Java: PathSum.java": {
                 "passed": 0,
-                "total": 7690
+                "total": 7688
             },
             "Python: path_sum.py": {
                 "passed": 0,
-                "total": 7690
+                "total": 7688
             }
         },
-        "9.07 Implement an inorder traversal without recursion": {
+        "Implement an inorder traversal without recursion": {
             "C++: tree_inorder.cc": {
                 "passed": 0,
                 "total": 3852
@@ -1098,7 +1101,21 @@ problem_mapping = {
                 "total": 3852
             }
         },
-        "9.08 Compute the kth node in an inorder traversal": {
+        "Implement a preorder traversal without recursion": {
+            "C++: tree_preorder.cc": {
+                "passed": 0,
+                "total": 3852
+            },
+            "Java: TreePreorder.java": {
+                "passed": 0,
+                "total": 3852
+            },
+            "Python: tree_preorder.py": {
+                "passed": 0,
+                "total": 3852
+            }
+        },
+        "Compute the kth node in an inorder traversal": {
             "C++: kth_node_in_tree.cc": {
                 "passed": 0,
                 "total": 3851
@@ -1112,7 +1129,7 @@ problem_mapping = {
                 "total": 3851
             }
         },
-        "9.09 Compute the successor": {
+        "Compute the successor": {
             "C++: successor_in_tree.cc": {
                 "passed": 0,
                 "total": 948
@@ -1126,7 +1143,7 @@ problem_mapping = {
                 "total": 948
             }
         },
-        "9.10 Implement an inorder traversal with constant space": {
+        "Implement an inorder traversal with O(1) space": {
             "C++: tree_with_parent_inorder.cc": {
                 "passed": 0,
                 "total": 3852
@@ -1140,7 +1157,7 @@ problem_mapping = {
                 "total": 3852
             }
         },
-        "9.11 Reconstruct a binary tree from traversal data": {
+        "Reconstruct a binary tree from traversal data": {
             "C++: tree_from_preorder_inorder.cc": {
                 "passed": 0,
                 "total": 3852
@@ -1154,7 +1171,7 @@ problem_mapping = {
                 "total": 3852
             }
         },
-        "9.12 Reconstruct a binary tree from a preorder traversal with markers": {
+        "Reconstruct a binary tree from a preorder traversal with markers": {
             "C++: tree_from_preorder_with_null.cc": {
                 "passed": 0,
                 "total": 3852
@@ -1168,7 +1185,7 @@ problem_mapping = {
                 "total": 3852
             }
         },
-        "9.13 Compute the leaves of a binary tree": {
+        "Form a linked list from the leaves of a binary tree": {
             "C++: tree_connect_leaves.cc": {
                 "passed": 0,
                 "total": 3852
@@ -1182,7 +1199,7 @@ problem_mapping = {
                 "total": 3852
             }
         },
-        "9.14 Compute the exterior of a binary tree": {
+        "Compute the exterior of a binary tree": {
             "C++: tree_exterior.cc": {
                 "passed": 0,
                 "total": 3852
@@ -1196,7 +1213,7 @@ problem_mapping = {
                 "total": 3852
             }
         },
-        "9.15 Compute the right sibling tree": {
+        "Compute the right sibling tree": {
             "C++: tree_right_sibling.cc": {
                 "passed": 0,
                 "total": 10
@@ -1211,8 +1228,9 @@ problem_mapping = {
             }
         }
     },
-    "Chapter 10: Heaps": {
-        "10.01 Merge sorted files": {
+    "Heaps": {
+        "Bootcamp: Heaps": {},
+        "Merge sorted files": {
             "C++: sorted_arrays_merge.cc": {
                 "passed": 0,
                 "total": 152
@@ -1226,7 +1244,7 @@ problem_mapping = {
                 "total": 152
             }
         },
-        "10.02 Sort an increasing-decreasing array": {
+        "Sort an increasing-decreasing array": {
             "C++: sort_increasing_decreasing_array.cc": {
                 "passed": 0,
                 "total": 203
@@ -1240,7 +1258,7 @@ problem_mapping = {
                 "total": 203
             }
         },
-        "10.03 Sort an almost-sorted array": {
+        "Sort an almost-sorted array": {
             "C++: sort_almost_sorted_array.cc": {
                 "passed": 0,
                 "total": 101
@@ -1254,7 +1272,7 @@ problem_mapping = {
                 "total": 101
             }
         },
-        "10.04 Compute the k closest stars": {
+        "Compute the k closest stars": {
             "C++: k_closest_stars.cc": {
                 "passed": 0,
                 "total": 51
@@ -1268,7 +1286,7 @@ problem_mapping = {
                 "total": 51
             }
         },
-        "10.05 Compute the median of online data": {
+        "Compute the median of online data": {
             "C++: online_median.cc": {
                 "passed": 0,
                 "total": 55
@@ -1282,7 +1300,7 @@ problem_mapping = {
                 "total": 55
             }
         },
-        "10.06 Compute the k largest elements in a max-heap": {
+        "Compute the k largest elements in a max-heap": {
             "C++: k_largest_in_heap.cc": {
                 "passed": 0,
                 "total": 102
@@ -1297,8 +1315,9 @@ problem_mapping = {
             }
         }
     },
-    "Chapter 11: Searching": {
-        "11.01 Search a sorted array for first occurrence of k": {
+    "Searching": {
+        "Bootcamp: Searching": {},
+        "Search a sorted array for first occurrence of k": {
             "C++: search_first_key.cc": {
                 "passed": 0,
                 "total": 314
@@ -1312,7 +1331,7 @@ problem_mapping = {
                 "total": 314
             }
         },
-        "11.02 Search a sorted array for entry equal to its index": {
+        "Search a sorted array for entry equal to its index": {
             "C++: search_entry_equal_to_index.cc": {
                 "passed": 0,
                 "total": 501
@@ -1326,7 +1345,7 @@ problem_mapping = {
                 "total": 501
             }
         },
-        "11.03 Search a cyclically sorted array": {
+        "Search a cyclically sorted array": {
             "C++: search_shifted_sorted_array.cc": {
                 "passed": 0,
                 "total": 307
@@ -1340,7 +1359,7 @@ problem_mapping = {
                 "total": 307
             }
         },
-        "11.04 Compute the integer square root": {
+        "Compute the integer square root": {
             "C++: int_square_root.cc": {
                 "passed": 0,
                 "total": 2000
@@ -1354,21 +1373,21 @@ problem_mapping = {
                 "total": 2000
             }
         },
-        "11.05 Compute the real square root": {
+        "Compute the real square root": {
             "C++: real_square_root.cc": {
                 "passed": 0,
-                "total": 11003
+                "total": 11004
             },
             "Java: RealSquareRoot.java": {
                 "passed": 0,
-                "total": 11003
+                "total": 11004
             },
             "Python: real_square_root.py": {
                 "passed": 0,
-                "total": 11003
+                "total": 11004
             }
         },
-        "11.06 Search in a 2D sorted array": {
+        "Search in a 2D sorted array": {
             "C++: search_row_col_sorted_matrix.cc": {
                 "passed": 0,
                 "total": 194
@@ -1382,7 +1401,7 @@ problem_mapping = {
                 "total": 194
             }
         },
-        "11.07 Find the min and max simultaneously": {
+        "Find the min and max simultaneously": {
             "C++: search_for_min_max_in_array.cc": {
                 "passed": 0,
                 "total": 501
@@ -1396,7 +1415,7 @@ problem_mapping = {
                 "total": 501
             }
         },
-        "11.08 Find the kth largest element": {
+        "Find the kth largest element": {
             "C++: kth_largest_in_array.cc": {
                 "passed": 0,
                 "total": 503
@@ -1410,7 +1429,7 @@ problem_mapping = {
                 "total": 503
             }
         },
-        "11.09 Find the missing IP address": {
+        "Find the missing IP address": {
             "C++: absent_value_array.cc": {
                 "passed": 0,
                 "total": 100
@@ -1424,7 +1443,7 @@ problem_mapping = {
                 "total": 100
             }
         },
-        "11.10 Find the duplicate and missing elements": {
+        "Find the duplicate and missing elements": {
             "C++: search_for_missing_element.cc": {
                 "passed": 0,
                 "total": 50
@@ -1439,8 +1458,8 @@ problem_mapping = {
             }
         }
     },
-    "Chapter 12: Hash Tables": {
-        "12.00 Bootcamp: Hash Tables": {
+    "Hash Tables": {
+        "Bootcamp: Hash Tables": {
             "C++: anagrams.cc": {
                 "passed": 0,
                 "total": 9
@@ -1454,21 +1473,21 @@ problem_mapping = {
                 "total": 9
             }
         },
-        "12.01 Test for palindromic permutations": {
+        "Test for palindromic permutations": {
             "C++: is_string_permutable_to_palindrome.cc": {
                 "passed": 0,
-                "total": 305
+                "total": 654
             },
             "Java: IsStringPermutableToPalindrome.java": {
                 "passed": 0,
-                "total": 305
+                "total": 654
             },
             "Python: is_string_permutable_to_palindrome.py": {
                 "passed": 0,
-                "total": 305
+                "total": 654
             }
         },
-        "12.02 Is an anonymous letter constructible?": {
+        "Is an anonymous letter constructible?": {
             "C++: is_anonymous_letter_constructible.cc": {
                 "passed": 0,
                 "total": 212
@@ -1482,12 +1501,12 @@ problem_mapping = {
                 "total": 212
             }
         },
-        "12.03 Implement an ISBN cache": {
+        "Implement an ISBN cache": {
             "C++: lru_cache.cc": {
                 "passed": 0,
                 "total": 101
             },
-            "Java: LruCache.java": {
+            "Java: LRUCache.java": {
                 "passed": 0,
                 "total": 101
             },
@@ -1496,7 +1515,7 @@ problem_mapping = {
                 "total": 101
             }
         },
-        "12.04 Compute the LCA, optimizing for close ancestors": {
+        "Compute the LCA, optimizing for close ancestors": {
             "C++: lowest_common_ancestor_close_ancestor.cc": {
                 "passed": 0,
                 "total": 948
@@ -1510,7 +1529,7 @@ problem_mapping = {
                 "total": 948
             }
         },
-        "12.05 Find the nearest repeated entries in an array": {
+        "Find the nearest repeated entries in an array": {
             "C++: nearest_repeated_entries.cc": {
                 "passed": 0,
                 "total": 505
@@ -1524,7 +1543,7 @@ problem_mapping = {
                 "total": 505
             }
         },
-        "12.06 Find the smallest subarray covering all values": {
+        "Find the smallest subarray covering all values": {
             "C++: smallest_subarray_covering_set.cc": {
                 "passed": 0,
                 "total": 904
@@ -1538,7 +1557,7 @@ problem_mapping = {
                 "total": 904
             }
         },
-        "12.07 Find smallest subarray sequentially covering all values": {
+        "Find smallest subarray sequentially covering all values": {
             "C++: smallest_subarray_covering_all_values.cc": {
                 "passed": 0,
                 "total": 629
@@ -1552,7 +1571,7 @@ problem_mapping = {
                 "total": 629
             }
         },
-        "12.08 Find the longest subarray with distinct entries": {
+        "Find the longest subarray with distinct entries": {
             "C++: longest_subarray_with_distinct_values.cc": {
                 "passed": 0,
                 "total": 987
@@ -1566,7 +1585,7 @@ problem_mapping = {
                 "total": 987
             }
         },
-        "12.09 Find the length of a longest contained interval": {
+        "Find the length of a longest contained interval": {
             "C++: longest_contained_interval.cc": {
                 "passed": 0,
                 "total": 203
@@ -1580,7 +1599,7 @@ problem_mapping = {
                 "total": 203
             }
         },
-        "12.10 Compute all string decompositions": {
+        "Compute all string decompositions": {
             "C++: string_decompositions_into_dictionary_words.cc": {
                 "passed": 0,
                 "total": 171
@@ -1594,7 +1613,7 @@ problem_mapping = {
                 "total": 171
             }
         },
-        "12.11 Test the Collatz conjecture": {
+        "Test the Collatz conjecture": {
             "C++: collatz_checker.cc": {
                 "passed": 0,
                 "total": 7
@@ -1607,10 +1626,12 @@ problem_mapping = {
                 "passed": 0,
                 "total": 7
             }
-        }
+        },
+        "Implement a hash function for chess": {}
     },
-    "Chapter 13: Sorting": {
-        "13.01 Compute the intersection of two sorted arrays": {
+    "Sorting": {
+        "Bootcamp: Sorting": {},
+        "Compute the intersection of two sorted arrays": {
             "C++: intersect_sorted_arrays.cc": {
                 "passed": 0,
                 "total": 202
@@ -1624,7 +1645,7 @@ problem_mapping = {
                 "total": 202
             }
         },
-        "13.02 Merge two sorted arrays": {
+        "Merge two sorted arrays": {
             "C++: two_sorted_arrays_merge.cc": {
                 "passed": 0,
                 "total": 201
@@ -1638,7 +1659,7 @@ problem_mapping = {
                 "total": 201
             }
         },
-        "13.03 Computing the h-index": {
+        "Computing the h-index": {
             "C++: h_index.cc": {
                 "passed": 0,
                 "total": 1001
@@ -1652,7 +1673,7 @@ problem_mapping = {
                 "total": 1001
             }
         },
-        "13.04 Remove first-name duplicates": {
+        "Remove first-name duplicates": {
             "C++: remove_duplicates.cc": {
                 "passed": 0,
                 "total": 202
@@ -1666,7 +1687,7 @@ problem_mapping = {
                 "total": 202
             }
         },
-        "13.05 Smallest nonconstructible value": {
+        "Smallest nonconstructible value": {
             "C++: smallest_nonconstructible_value.cc": {
                 "passed": 0,
                 "total": 308
@@ -1680,7 +1701,7 @@ problem_mapping = {
                 "total": 308
             }
         },
-        "13.06 Render a calendar": {
+        "Render a calendar": {
             "C++: calendar_rendering.cc": {
                 "passed": 0,
                 "total": 97
@@ -1694,7 +1715,7 @@ problem_mapping = {
                 "total": 97
             }
         },
-        "13.07 Merging intervals": {
+        "Merging intervals": {
             "C++: interval_add.cc": {
                 "passed": 0,
                 "total": 103
@@ -1708,7 +1729,7 @@ problem_mapping = {
                 "total": 103
             }
         },
-        "13.08 Compute the union of intervals": {
+        "Compute the union of intervals": {
             "C++: intervals_union.cc": {
                 "passed": 0,
                 "total": 191
@@ -1722,7 +1743,7 @@ problem_mapping = {
                 "total": 191
             }
         },
-        "13.09 Partitioning and sorting an array with many repeated entries": {
+        "Partitioning and sorting an array with many repeated entries": {
             "C++: group_equal_entries.cc": {
                 "passed": 0,
                 "total": 33
@@ -1736,7 +1757,7 @@ problem_mapping = {
                 "total": 33
             }
         },
-        "13.10 Team photo day---1": {
+        "Team photo day - 1": {
             "C++: is_array_dominated.cc": {
                 "passed": 0,
                 "total": 105
@@ -1750,7 +1771,7 @@ problem_mapping = {
                 "total": 105
             }
         },
-        "13.11 Implement a fast sorting algorithm for lists": {
+        "Implement a fast sorting algorithm for lists": {
             "C++: sort_list.cc": {
                 "passed": 0,
                 "total": 209
@@ -1764,7 +1785,7 @@ problem_mapping = {
                 "total": 209
             }
         },
-        "13.12 Compute a salary threshold": {
+        "Compute a salary threshold": {
             "C++: find_salary_threshold.cc": {
                 "passed": 0,
                 "total": 1005
@@ -1779,36 +1800,23 @@ problem_mapping = {
             }
         }
     },
-    "Chapter 14: Binary Search Trees": {
-        "14.00 Bootcamp: Binary Search Trees": {
-            "C++: search_in_bst.cc": {
-                "passed": 0,
-                "total": 955
-            },
-            "Java: SearchInBst.java": {
-                "passed": 0,
-                "total": 955
-            },
-            "Python: search_in_bst.py": {
-                "passed": 0,
-                "total": 955
-            }
-        },
-        "14.01 Test if a binary tree satisfies the BST property": {
+    "Binary Search Trees": {
+        "Bootcamp: Binary Search Trees": {},
+        "Test if a binary tree satisfies the BST property": {
             "C++: is_tree_a_bst.cc": {
                 "passed": 0,
-                "total": 3139
+                "total": 3136
             },
             "Java: IsTreeABst.java": {
                 "passed": 0,
-                "total": 3139
+                "total": 3136
             },
             "Python: is_tree_a_bst.py": {
                 "passed": 0,
-                "total": 3139
+                "total": 3136
             }
         },
-        "14.02 Find the first key greater than a given value in a BST": {
+        "Find the first key greater than a given value in a BST": {
             "C++: search_first_greater_value_in_bst.cc": {
                 "passed": 0,
                 "total": 949
@@ -1822,7 +1830,7 @@ problem_mapping = {
                 "total": 949
             }
         },
-        "14.03 Find the k largest elements in a BST": {
+        "Find the k largest elements in a BST": {
             "C++: k_largest_values_in_bst.cc": {
                 "passed": 0,
                 "total": 949
@@ -1836,7 +1844,7 @@ problem_mapping = {
                 "total": 949
             }
         },
-        "14.04 Compute the LCA in a BST": {
+        "Compute the LCA in a BST": {
             "C++: lowest_common_ancestor_in_bst.cc": {
                 "passed": 0,
                 "total": 951
@@ -1850,7 +1858,7 @@ problem_mapping = {
                 "total": 951
             }
         },
-        "14.05 Reconstruct a BST from traversal data": {
+        "Reconstruct a BST from traversal data": {
             "C++: bst_from_preorder.cc": {
                 "passed": 0,
                 "total": 950
@@ -1864,7 +1872,7 @@ problem_mapping = {
                 "total": 950
             }
         },
-        "14.06 Find the closest entries in three sorted arrays": {
+        "Find the closest entries in three sorted arrays": {
             "C++: minimum_distance_3_sorted_arrays.cc": {
                 "passed": 0,
                 "total": 51
@@ -1878,7 +1886,7 @@ problem_mapping = {
                 "total": 51
             }
         },
-        "14.07 Enumerate extended integers": {
+        "Enumerate numbers of the form a + b sqrt(2)": {
             "C++: a_b_sqrt2.cc": {
                 "passed": 0,
                 "total": 13
@@ -1892,35 +1900,35 @@ problem_mapping = {
                 "total": 13
             }
         },
-        "14.08 Build a minimum height BST from a sorted array": {
+        "Build a minimum height BST from a sorted array": {
             "C++: bst_from_sorted_array.cc": {
                 "passed": 0,
-                "total": 87
+                "total": 100
             },
             "Java: BstFromSortedArray.java": {
                 "passed": 0,
-                "total": 87
+                "total": 100
             },
             "Python: bst_from_sorted_array.py": {
                 "passed": 0,
-                "total": 87
+                "total": 100
             }
         },
-        "14.09 Test if three BST nodes are totally ordered": {
+        "Test if three BST nodes are totally ordered": {
             "C++: descendant_and_ancestor_in_bst.cc": {
                 "passed": 0,
-                "total": 958
+                "total": 959
             },
             "Java: DescendantAndAncestorInBst.java": {
                 "passed": 0,
-                "total": 958
+                "total": 959
             },
             "Python: descendant_and_ancestor_in_bst.py": {
                 "passed": 0,
-                "total": 958
+                "total": 959
             }
         },
-        "14.10 The range lookup problem": {
+        "The range lookup problem": {
             "C++: range_lookup_in_bst.cc": {
                 "passed": 0,
                 "total": 954
@@ -1934,7 +1942,7 @@ problem_mapping = {
                 "total": 954
             }
         },
-        "14.11 Add credits": {
+        "Add credits": {
             "C++: adding_credits.cc": {
                 "passed": 0,
                 "total": 201
@@ -1949,22 +1957,9 @@ problem_mapping = {
             }
         }
     },
-    "Chapter 15: Recursion": {
-        "15.00 Bootcamp: Recursion": {
-            "C++: euclidean_gcd.cc": {
-                "passed": 0,
-                "total": 10034
-            },
-            "Java: EuclideanGcd.java": {
-                "passed": 0,
-                "total": 10034
-            },
-            "Python: euclidean_gcd.py": {
-                "passed": 0,
-                "total": 10034
-            }
-        },
-        "15.01 The Towers of Hanoi problem": {
+    "Recursion": {
+        "Bootcamp: Recursion": {},
+        "The Towers of Hanoi problem": {
             "C++: hanoi.cc": {
                 "passed": 0,
                 "total": 10
@@ -1978,21 +1973,7 @@ problem_mapping = {
                 "total": 10
             }
         },
-        "15.02 Compute all mnemonics for a phone number": {
-            "C++: phone_number_mnemonic.cc": {
-                "passed": 0,
-                "total": 102
-            },
-            "Java: PhoneNumberMnemonic.java": {
-                "passed": 0,
-                "total": 102
-            },
-            "Python: phone_number_mnemonic.py": {
-                "passed": 0,
-                "total": 102
-            }
-        },
-        "15.03 Generate all nonattacking placements of n-Queens": {
+        "Generate all nonattacking placements of n-Queens": {
             "C++: n_queens.cc": {
                 "passed": 0,
                 "total": 10
@@ -2006,7 +1987,7 @@ problem_mapping = {
                 "total": 10
             }
         },
-        "15.04 Generate permutations": {
+        "Generate permutations": {
             "C++: permutations.cc": {
                 "passed": 0,
                 "total": 8
@@ -2020,7 +2001,7 @@ problem_mapping = {
                 "total": 8
             }
         },
-        "15.05 Generate the power set": {
+        "Generate the power set": {
             "C++: power_set.cc": {
                 "passed": 0,
                 "total": 15
@@ -2034,7 +2015,7 @@ problem_mapping = {
                 "total": 15
             }
         },
-        "15.06 Generate all subsets of size k": {
+        "Generate all subsets of size k": {
             "C++: combinations.cc": {
                 "passed": 0,
                 "total": 120
@@ -2048,7 +2029,7 @@ problem_mapping = {
                 "total": 120
             }
         },
-        "15.07 Generate strings of matched parens": {
+        "Generate strings of matched parens": {
             "C++: enumerate_balanced_parentheses.cc": {
                 "passed": 0,
                 "total": 11
@@ -2062,7 +2043,7 @@ problem_mapping = {
                 "total": 11
             }
         },
-        "15.08 Generate palindromic decompositions": {
+        "Generate palindromic decompositions": {
             "C++: enumerate_palindromic_decompositions.cc": {
                 "passed": 0,
                 "total": 522
@@ -2076,7 +2057,7 @@ problem_mapping = {
                 "total": 522
             }
         },
-        "15.09 Generate binary trees": {
+        "Generate binary trees": {
             "C++: enumerate_trees.cc": {
                 "passed": 0,
                 "total": 10
@@ -2090,7 +2071,7 @@ problem_mapping = {
                 "total": 10
             }
         },
-        "15.10 Implement a Sudoku solver": {
+        "Implement a Sudoku solver": {
             "C++: sudoku_solve.cc": {
                 "passed": 0,
                 "total": 400
@@ -2104,7 +2085,7 @@ problem_mapping = {
                 "total": 400
             }
         },
-        "15.11 Compute a Gray code": {
+        "Compute a Gray code": {
             "C++: gray_code.cc": {
                 "passed": 0,
                 "total": 10
@@ -2119,9 +2100,17 @@ problem_mapping = {
             }
         }
     },
-    "Chapter 16: Dynamic Programming": {
-        "16.00 Bootcamp: Dynamic Programming": {
+    "Dynamic Programming": {
+        "Bootcamp: Dynamic Programming": {
             "C++: fibonacci.cc": {
+                "passed": 0,
+                "total": 46
+            },
+            "Java: Fibonacci.java": {
+                "passed": 0,
+                "total": 46
+            },
+            "Python: fibonacci.py": {
                 "passed": 0,
                 "total": 46
             },
@@ -2129,24 +2118,16 @@ problem_mapping = {
                 "passed": 0,
                 "total": 1001
             },
-            "Java: Fibonacci.java": {
-                "passed": 0,
-                "total": 46
-            },
             "Java: MaxSumSubarray.java": {
                 "passed": 0,
                 "total": 1001
-            },
-            "Python: fibonacci.py": {
-                "passed": 0,
-                "total": 46
             },
             "Python: max_sum_subarray.py": {
                 "passed": 0,
                 "total": 1001
             }
         },
-        "16.01 Count the number of score combinations": {
+        "Count the number of score combinations": {
             "C++: number_of_score_combinations.cc": {
                 "passed": 0,
                 "total": 1003
@@ -2160,21 +2141,21 @@ problem_mapping = {
                 "total": 1003
             }
         },
-        "16.02 Compute the Levenshtein distance": {
+        "Compute the Levenshtein distance": {
             "C++: levenshtein_distance.cc": {
                 "passed": 0,
-                "total": 100
+                "total": 103
             },
             "Java: LevenshteinDistance.java": {
                 "passed": 0,
-                "total": 100
+                "total": 103
             },
             "Python: levenshtein_distance.py": {
                 "passed": 0,
-                "total": 100
+                "total": 103
             }
         },
-        "16.03 Count the number of ways to traverse a 2D array": {
+        "Count the number of ways to traverse a 2D array": {
             "C++: number_of_traversals_matrix.cc": {
                 "passed": 0,
                 "total": 1775
@@ -2188,49 +2169,49 @@ problem_mapping = {
                 "total": 1775
             }
         },
-        "16.04 Compute the binomial coefficients": {
+        "Compute the binomial coefficients": {
             "C++: binomial_coefficients.cc": {
                 "passed": 0,
-                "total": 5906
+                "total": 8356
             },
             "Java: BinomialCoefficients.java": {
                 "passed": 0,
-                "total": 5906
+                "total": 8356
             },
             "Python: binomial_coefficients.py": {
                 "passed": 0,
-                "total": 5906
+                "total": 8356
             }
         },
-        "16.05 Search for a sequence in a 2D array": {
+        "Search for a sequence in a 2D array": {
             "C++: is_string_in_matrix.cc": {
                 "passed": 0,
-                "total": 186
+                "total": 187
             },
             "Java: IsStringInMatrix.java": {
                 "passed": 0,
-                "total": 186
+                "total": 187
             },
             "Python: is_string_in_matrix.py": {
                 "passed": 0,
-                "total": 186
+                "total": 187
             }
         },
-        "16.06 The knapsack problem": {
+        "The knapsack problem": {
             "C++: knapsack.cc": {
                 "passed": 0,
-                "total": 100
+                "total": 58
             },
             "Java: Knapsack.java": {
                 "passed": 0,
-                "total": 100
+                "total": 58
             },
             "Python: knapsack.py": {
                 "passed": 0,
-                "total": 100
+                "total": 58
             }
         },
-        "16.07 Building a search index for domains": {
+        "The bedbathandbeyond.com problem": {
             "C++: is_string_decomposable_into_words.cc": {
                 "passed": 0,
                 "total": 41
@@ -2244,7 +2225,7 @@ problem_mapping = {
                 "total": 41
             }
         },
-        "16.08 Find the minimum weight path in a triangle": {
+        "Find the minimum weight path in a triangle": {
             "C++: minimum_weight_path_in_a_triangle.cc": {
                 "passed": 0,
                 "total": 101
@@ -2258,21 +2239,21 @@ problem_mapping = {
                 "total": 101
             }
         },
-        "16.09 Pick up coins for maximum gain": {
+        "Pick up coins for maximum gain": {
             "C++: picking_up_coins.cc": {
                 "passed": 0,
-                "total": 162
+                "total": 163
             },
             "Java: PickingUpCoins.java": {
                 "passed": 0,
-                "total": 162
+                "total": 163
             },
             "Python: picking_up_coins.py": {
                 "passed": 0,
-                "total": 162
+                "total": 163
             }
         },
-        "16.10 Count the number of moves to climb stairs": {
+        "Count the number of moves to climb stairs": {
             "C++: number_of_traversals_staircase.cc": {
                 "passed": 0,
                 "total": 546
@@ -2286,7 +2267,7 @@ problem_mapping = {
                 "total": 546
             }
         },
-        "16.11 The pretty printing problem": {
+        "The pretty printing problem": {
             "C++: pretty_printing.cc": {
                 "passed": 0,
                 "total": 102
@@ -2300,7 +2281,7 @@ problem_mapping = {
                 "total": 102
             }
         },
-        "16.12 Find the longest nondecreasing subsequence": {
+        "Find the longest nondecreasing subsequence": {
             "C++: longest_nondecreasing_subsequence.cc": {
                 "passed": 0,
                 "total": 200
@@ -2315,22 +2296,9 @@ problem_mapping = {
             }
         }
     },
-    "Chapter 17: Greedy Algorithms and Invariants": {
-        "17.00 Bootcamp: Greedy Algorithms and Invariants": {
-            "C++: making_change.cc": {
-                "passed": 0,
-                "total": 49999
-            },
-            "Java: MakingChange.java": {
-                "passed": 0,
-                "total": 49999
-            },
-            "Python: making_change.py": {
-                "passed": 0,
-                "total": 49999
-            }
-        },
-        "17.01 Compute an optimum assignment of tasks": {
+    "Greedy Algorithms and Invariants": {
+        "Bootcamp: Greedy Algorithms and Invariants": {},
+        "Compute an optimum assignment of tasks": {
             "C++: task_pairing.cc": {
                 "passed": 0,
                 "total": 500
@@ -2344,7 +2312,7 @@ problem_mapping = {
                 "total": 500
             }
         },
-        "17.02 Schedule to minimize waiting time": {
+        "Schedule to minimize waiting time": {
             "C++: minimum_waiting_time.cc": {
                 "passed": 0,
                 "total": 501
@@ -2358,8 +2326,16 @@ problem_mapping = {
                 "total": 501
             }
         },
-        "17.03 The interval covering problem": {
+        "The interval covering problem": {
             "C++: minimum_points_covering_intervals.cc": {
+                "passed": 0,
+                "total": 103
+            },
+            "Java: MinimumPointsCoveringIntervals.java": {
+                "passed": 0,
+                "total": 103
+            },
+            "Python: minimum_points_covering_intervals.py": {
                 "passed": 0,
                 "total": 103
             },
@@ -2367,24 +2343,16 @@ problem_mapping = {
                 "passed": 0,
                 "total": 1005
             },
-            "Java: MinimumPointsCoveringIntervals.java": {
-                "passed": 0,
-                "total": 103
-            },
             "Java: TwoSum.java": {
                 "passed": 0,
                 "total": 1005
-            },
-            "Python: minimum_points_covering_intervals.py": {
-                "passed": 0,
-                "total": 103
             },
             "Python: two_sum.py": {
                 "passed": 0,
                 "total": 1005
             }
         },
-        "17.04 The 3-sum problem": {
+        "The 3-sum problem": {
             "C++: three_sum.cc": {
                 "passed": 0,
                 "total": 1008
@@ -2398,7 +2366,7 @@ problem_mapping = {
                 "total": 1008
             }
         },
-        "17.05 Find the majority element": {
+        "Find the majority element": {
             "C++: majority_element.cc": {
                 "passed": 0,
                 "total": 201
@@ -2412,7 +2380,7 @@ problem_mapping = {
                 "total": 201
             }
         },
-        "17.06 The gasup problem": {
+        "The gasup problem": {
             "C++: refueling_schedule.cc": {
                 "passed": 0,
                 "total": 202
@@ -2426,7 +2394,7 @@ problem_mapping = {
                 "total": 202
             }
         },
-        "17.07 Compute the maximum water trapped by a pair of vertical lines": {
+        "Compute the maximum water trapped by a pair of vertical lines": {
             "C++: max_trapped_water.cc": {
                 "passed": 0,
                 "total": 204
@@ -2440,7 +2408,7 @@ problem_mapping = {
                 "total": 204
             }
         },
-        "17.08 Compute the largest rectangle under the skyline": {
+        "Compute the largest rectangle under the skyline": {
             "C++: largest_rectangle_under_skyline.cc": {
                 "passed": 0,
                 "total": 1004
@@ -2455,8 +2423,9 @@ problem_mapping = {
             }
         }
     },
-    "Chapter 18: Graphs": {
-        "18.01 Search a maze": {
+    "Graphs": {
+        "Bootcamp: Graphs": {},
+        "Search a maze": {
             "C++: search_maze.cc": {
                 "passed": 0,
                 "total": 101
@@ -2470,7 +2439,7 @@ problem_mapping = {
                 "total": 101
             }
         },
-        "18.02 Paint a Boolean matrix": {
+        "Paint a Boolean matrix": {
             "C++: matrix_connected_regions.cc": {
                 "passed": 0,
                 "total": 50
@@ -2484,7 +2453,7 @@ problem_mapping = {
                 "total": 50
             }
         },
-        "18.03 Compute enclosed regions": {
+        "Compute enclosed regions": {
             "C++: matrix_enclosed_regions.cc": {
                 "passed": 0,
                 "total": 51
@@ -2498,7 +2467,7 @@ problem_mapping = {
                 "total": 51
             }
         },
-        "18.04 Deadlock detection": {
+        "Deadlock detection": {
             "C++: deadlock_detection.cc": {
                 "passed": 0,
                 "total": 71
@@ -2512,7 +2481,7 @@ problem_mapping = {
                 "total": 71
             }
         },
-        "18.05 Clone a graph": {
+        "Clone a graph": {
             "C++: graph_clone.cc": {
                 "passed": 0,
                 "total": 91
@@ -2526,7 +2495,7 @@ problem_mapping = {
                 "total": 91
             }
         },
-        "18.06 Making wired connections": {
+        "Making wired connections": {
             "C++: is_circuit_wirable.cc": {
                 "passed": 0,
                 "total": 85
@@ -2540,21 +2509,21 @@ problem_mapping = {
                 "total": 85
             }
         },
-        "18.07 Transform one string to another": {
+        "Transform one string to another": {
             "C++: string_transformability.cc": {
                 "passed": 0,
-                "total": 48
+                "total": 51
             },
             "Java: StringTransformability.java": {
                 "passed": 0,
-                "total": 48
+                "total": 51
             },
             "Python: string_transformability.py": {
                 "passed": 0,
-                "total": 48
+                "total": 51
             }
         },
-        "18.08 Team photo day---2": {
+        "Team photo day - 2": {
             "C++: max_teams_in_photograph.cc": {
                 "passed": 0,
                 "total": 69
@@ -2569,8 +2538,9 @@ problem_mapping = {
             }
         }
     },
-    "Chapter 24: Honors Class": {
-        "24.01 Compute the greatest common divisor": {
+    "Honors Class": {
+        "Bootcamp: Honors Class": {},
+        "Compute the greatest common divisor": {
             "C++: gcd.cc": {
                 "passed": 0,
                 "total": 10034
@@ -2584,7 +2554,7 @@ problem_mapping = {
                 "total": 10034
             }
         },
-        "24.02 Find the first missing positive entry": {
+        "Find the first missing positive entry": {
             "C++: first_missing_positive_entry.cc": {
                 "passed": 0,
                 "total": 1001
@@ -2598,7 +2568,7 @@ problem_mapping = {
                 "total": 1001
             }
         },
-        "24.03 Buy and sell a stock at most k times": {
+        "Buy and sell a stock k times": {
             "C++: buy_and_sell_stock_k_times.cc": {
                 "passed": 0,
                 "total": 201
@@ -2612,7 +2582,7 @@ problem_mapping = {
                 "total": 201
             }
         },
-        "24.04 Compute the maximum product of all entries but one": {
+        "Compute the maximum product of all entries but one": {
             "C++: max_product_all_but_one.cc": {
                 "passed": 0,
                 "total": 35
@@ -2626,7 +2596,7 @@ problem_mapping = {
                 "total": 35
             }
         },
-        "24.05 Compute the longest contiguous increasing subarray": {
+        "Compute the longest contiguous increasing subarray": {
             "C++: longest_increasing_subarray.cc": {
                 "passed": 0,
                 "total": 100
@@ -2640,7 +2610,7 @@ problem_mapping = {
                 "total": 100
             }
         },
-        "24.06 Rotate an array": {
+        "Rotate an array": {
             "C++: rotate_array.cc": {
                 "passed": 0,
                 "total": 101
@@ -2654,7 +2624,7 @@ problem_mapping = {
                 "total": 101
             }
         },
-        "24.07 Identify positions attacked by rooks": {
+        "Identify positions attacked by rooks": {
             "C++: rook_attack.cc": {
                 "passed": 0,
                 "total": 201
@@ -2668,7 +2638,7 @@ problem_mapping = {
                 "total": 201
             }
         },
-        "24.08 Justify text": {
+        "Justify text": {
             "C++: left_right_justify_text.cc": {
                 "passed": 0,
                 "total": 30
@@ -2682,7 +2652,7 @@ problem_mapping = {
                 "total": 30
             }
         },
-        "24.09 Implement list zipping": {
+        "Implement list zipping": {
             "C++: zip_list.cc": {
                 "passed": 0,
                 "total": 51
@@ -2696,7 +2666,7 @@ problem_mapping = {
                 "total": 51
             }
         },
-        "24.10 Copy a postings list": {
+        "Copy a postings list": {
             "C++: copy_posting_list.cc": {
                 "passed": 0,
                 "total": 34
@@ -2710,21 +2680,21 @@ problem_mapping = {
                 "total": 34
             }
         },
-        "24.11 Compute the longest substring with matching parens": {
+        "Compute the longest substring with matching parens": {
             "C++: longest_substring_with_matching_parentheses.cc": {
                 "passed": 0,
-                "total": 342
+                "total": 348
             },
             "Java: LongestSubstringWithMatchingParentheses.java": {
                 "passed": 0,
-                "total": 342
+                "total": 348
             },
             "Python: longest_substring_with_matching_parentheses.py": {
                 "passed": 0,
-                "total": 342
+                "total": 348
             }
         },
-        "24.12 Compute the maximum of a sliding window": {
+        "Compute the maximum of a sliding window": {
             "C++: max_of_sliding_window.cc": {
                 "passed": 0,
                 "total": 149
@@ -2738,7 +2708,21 @@ problem_mapping = {
                 "total": 149
             }
         },
-        "24.13 Compute fair bonuses": {
+        "Implement a postorder traversal without recursion": {
+            "C++: tree_postorder.cc": {
+                "passed": 0,
+                "total": 3852
+            },
+            "Java: TreePostorder.java": {
+                "passed": 0,
+                "total": 3852
+            },
+            "Python: tree_postorder.py": {
+                "passed": 0,
+                "total": 3852
+            }
+        },
+        "Compute fair bonuses": {
             "C++: bonus.cc": {
                 "passed": 0,
                 "total": 106
@@ -2752,7 +2736,7 @@ problem_mapping = {
                 "total": 106
             }
         },
-        "24.14 Search a sorted array of unknown length": {
+        "Search a sorted array of unknown length": {
             "C++: search_unknown_length_array.cc": {
                 "passed": 0,
                 "total": 206
@@ -2766,7 +2750,7 @@ problem_mapping = {
                 "total": 206
             }
         },
-        "24.15 Search in two sorted arrays": {
+        "Search in two sorted arrays": {
             "C++: kth_largest_element_in_two_sorted_arrays.cc": {
                 "passed": 0,
                 "total": 201
@@ -2780,7 +2764,7 @@ problem_mapping = {
                 "total": 201
             }
         },
-        "24.16 Find the kth largest element---large n, small k": {
+        "Find the kth largest element - large n, small k": {
             "C++: kth_largest_element_in_long_array.cc": {
                 "passed": 0,
                 "total": 503
@@ -2794,7 +2778,7 @@ problem_mapping = {
                 "total": 503
             }
         },
-        "24.17 Find an element that appears only once": {
+        "Find an element that appears only once": {
             "C++: element_appearing_once.cc": {
                 "passed": 0,
                 "total": 102
@@ -2808,7 +2792,7 @@ problem_mapping = {
                 "total": 102
             }
         },
-        "24.18 Find the line through the most points": {
+        "Find the line through the most points": {
             "C++: line_through_most_points.cc": {
                 "passed": 0,
                 "total": 282
@@ -2822,7 +2806,7 @@ problem_mapping = {
                 "total": 282
             }
         },
-        "24.19 Convert a sorted doubly linked list into a BST": {
+        "Convert a sorted doubly linked list into a BST": {
             "C++: sorted_list_to_bst.cc": {
                 "passed": 0,
                 "total": 100
@@ -2836,7 +2820,7 @@ problem_mapping = {
                 "total": 100
             }
         },
-        "24.20 Convert a BST to a sorted doubly linked list": {
+        "Convert a BST to a sorted doubly linked list": {
             "C++: bst_to_sorted_list.cc": {
                 "passed": 0,
                 "total": 950
@@ -2850,7 +2834,7 @@ problem_mapping = {
                 "total": 950
             }
         },
-        "24.21 Merge two BSTs": {
+        "Merge two BSTs": {
             "C++: bst_merge.cc": {
                 "passed": 0,
                 "total": 474
@@ -2864,7 +2848,7 @@ problem_mapping = {
                 "total": 474
             }
         },
-        "24.22 Implement regular expression matching": {
+        "Implement regular expression matching": {
             "C++: regular_expression.cc": {
                 "passed": 0,
                 "total": 1596
@@ -2878,7 +2862,7 @@ problem_mapping = {
                 "total": 1596
             }
         },
-        "24.23 Synthesize an expression": {
+        "Synthesize an expression": {
             "C++: insert_operators_in_string.cc": {
                 "passed": 0,
                 "total": 101
@@ -2892,7 +2876,7 @@ problem_mapping = {
                 "total": 101
             }
         },
-        "24.24 Count inversions": {
+        "Count inversions": {
             "C++: count_inversions.cc": {
                 "passed": 0,
                 "total": 1001
@@ -2906,7 +2890,7 @@ problem_mapping = {
                 "total": 1001
             }
         },
-        "24.25 Draw the skyline": {
+        "Draw the skyline": {
             "C++: drawing_skyline.cc": {
                 "passed": 0,
                 "total": 30
@@ -2920,7 +2904,7 @@ problem_mapping = {
                 "total": 30
             }
         },
-        "24.26 Measure with defective jugs": {
+        "Measure with defective jugs": {
             "C++: defective_jugs.cc": {
                 "passed": 0,
                 "total": 200
@@ -2934,7 +2918,7 @@ problem_mapping = {
                 "total": 200
             }
         },
-        "24.27 Compute the maximum subarray sum in a circular array": {
+        "Compute the maximum subarray sum in a circular array": {
             "C++: maximum_subarray_in_circular_array.cc": {
                 "passed": 0,
                 "total": 501
@@ -2948,7 +2932,7 @@ problem_mapping = {
                 "total": 501
             }
         },
-        "24.28 Determine the critical height": {
+        "Determine the critical height": {
             "C++: max_safe_height.cc": {
                 "passed": 0,
                 "total": 3829
@@ -2962,33 +2946,33 @@ problem_mapping = {
                 "total": 3829
             }
         },
-        "24.29 Find the maximum 2D subarray": {
-            "C++: max_square_submatrix.cc": {
-                "passed": 0,
-                "total": 101
-            },
+        "Find the maximum 2D subarray": {
             "C++: max_submatrix.cc": {
                 "passed": 0,
                 "total": 100
-            },
-            "Java: MaxSquareSubmatrix.java": {
-                "passed": 0,
-                "total": 101
             },
             "Java: MaxSubmatrix.java": {
                 "passed": 0,
                 "total": 100
             },
-            "Python: max_square_submatrix.py": {
-                "passed": 0,
-                "total": 101
-            },
             "Python: max_submatrix.py": {
                 "passed": 0,
                 "total": 100
+            },
+            "C++: max_square_submatrix.cc": {
+                "passed": 0,
+                "total": 101
+            },
+            "Java: MaxSquareSubmatrix.java": {
+                "passed": 0,
+                "total": 101
+            },
+            "Python: max_square_submatrix.py": {
+                "passed": 0,
+                "total": 101
             }
         },
-        "24.30 Implement Huffman coding": {
+        "Implement Huffman coding": {
             "C++: huffman_coding.cc": {
                 "passed": 0,
                 "total": 11
@@ -3002,7 +2986,7 @@ problem_mapping = {
                 "total": 11
             }
         },
-        "24.31 Trapping water": {
+        "Trapping water": {
             "C++: max_water_trappable.cc": {
                 "passed": 0,
                 "total": 1001
@@ -3016,7 +3000,7 @@ problem_mapping = {
                 "total": 1001
             }
         },
-        "24.32 The heavy hitter problem": {
+        "The heavy hitter problem": {
             "C++: search_frequent_items.cc": {
                 "passed": 0,
                 "total": 265
@@ -3030,7 +3014,7 @@ problem_mapping = {
                 "total": 265
             }
         },
-        "24.33 Find the longest subarray with sum constraint": {
+        "Find the longest subarray whose sum <=  k": {
             "C++: longest_subarray_with_sum_constraint.cc": {
                 "passed": 0,
                 "total": 102
@@ -3044,7 +3028,7 @@ problem_mapping = {
                 "total": 102
             }
         },
-        "24.34 Road network": {
+        "Road network": {
             "C++: road_network.cc": {
                 "passed": 0,
                 "total": 50
@@ -3058,7 +3042,7 @@ problem_mapping = {
                 "total": 50
             }
         },
-        "24.35 Test if arbitrage is possible": {
+        "Test if arbitrage is possible": {
             "C++: arbitrage.cc": {
                 "passed": 0,
                 "total": 201
@@ -3073,4 +3057,4 @@ problem_mapping = {
             }
         }
     }
-};
+});

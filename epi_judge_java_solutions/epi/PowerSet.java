@@ -2,12 +2,13 @@ package epi;
 
 import epi.test_framework.EpiTest;
 import epi.test_framework.EpiTestComparator;
-import epi.test_framework.GenericTest;
 import epi.test_framework.LexicographicalListComparator;
+import epi.test_framework.GenericTest;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.BiPredicate;
 
 public class PowerSet {
   @EpiTest(testDataFile = "power_set.tsv")
@@ -15,30 +16,23 @@ public class PowerSet {
   public static List<List<Integer>> generatePowerSet(List<Integer> inputSet) {
 
     List<List<Integer>> powerSet = new ArrayList<>();
-    directedPowerSet(inputSet, 0, new ArrayList<Integer>(), powerSet);
+    for (int intForSubset = 0; intForSubset < (1 << inputSet.size());
+         ++intForSubset) {
+      int bitArray = intForSubset;
+      List<Integer> subset = new ArrayList<>();
+      while (bitArray != 0) {
+        subset.add(inputSet.get(
+            (int)(Math.log(bitArray & ~(bitArray - 1)) / Math.log(2))));
+        bitArray &= bitArray - 1;
+      }
+      powerSet.add(subset);
+    }
     return powerSet;
   }
 
-  // Generate all subsets whose intersection with inputSet[0], ...,
-  // inputSet[toBeSelected - 1] is exactly selectedSoFar.
-  private static void directedPowerSet(List<Integer> inputSet, int toBeSelected,
-                                       List<Integer> selectedSoFar,
-                                       List<List<Integer>> powerSet) {
-    if (toBeSelected == inputSet.size()) {
-      powerSet.add(new ArrayList<>(selectedSoFar));
-      return;
-    }
-    // Generate all subsets that contain inputSet[toBeSelected].
-    selectedSoFar.add(inputSet.get(toBeSelected));
-    directedPowerSet(inputSet, toBeSelected + 1, selectedSoFar, powerSet);
-    // Generate all subsets that do not contain inputSet[toBeSelected].
-    selectedSoFar.remove(selectedSoFar.size() - 1);
-    directedPowerSet(inputSet, toBeSelected + 1, selectedSoFar, powerSet);
-  }
-
   @EpiTestComparator
-  public static boolean comp(List<List<Integer>> expected,
-                             List<List<Integer>> result) {
+  public static BiPredicate<List<List<Integer>>, List<List<Integer>>> comp =
+      (expected, result) -> {
     if (result == null) {
       return false;
     }
@@ -51,7 +45,7 @@ public class PowerSet {
     }
     result.sort(new LexicographicalListComparator<>());
     return expected.equals(result);
-  }
+  };
 
   public static void main(String[] args) {
     System.exit(

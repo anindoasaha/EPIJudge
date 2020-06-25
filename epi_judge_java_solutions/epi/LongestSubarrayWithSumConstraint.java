@@ -13,10 +13,11 @@ public class LongestSubarrayWithSumConstraint {
 
     // Build the prefix sum according to A.
     List<Integer> prefixSum = new ArrayList<>();
-    A.stream().reduce(0, (left, right) -> {
-      prefixSum.add(left + right);
-      return left + right;
-    });
+    int sum = 0;
+    for (int a : A) {
+      sum += a;
+      prefixSum.add(sum);
+    }
 
     // Early returns if the sum of A is smaller than or equal to k.
     if (prefixSum.get(prefixSum.size() - 1) <= k) {

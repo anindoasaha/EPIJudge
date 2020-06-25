@@ -8,7 +8,6 @@
 
 using std::queue;
 using std::unique_ptr;
-using test_framework::BinaryTreeSerializationTrait;
 
 template <typename T>
 struct BinaryTreeNode {
@@ -41,11 +40,9 @@ void PopulateLowerLevelNextField(BinaryTreeNode<int>* start_node) {
   }
 }
 
-namespace test_framework {
 template <>
-struct SerializationTrait<unique_ptr<BinaryTreeNode<int>>>
-    : BinaryTreeSerializationTrait<unique_ptr<BinaryTreeNode<int>>, false> {};
-}  // namespace test_framework
+struct SerializationTraits<unique_ptr<BinaryTreeNode<int>>>
+    : BinaryTreeSerializationTraits<unique_ptr<BinaryTreeNode<int>>, false> {};
 
 std::vector<std::vector<int>> ConstructRightSiblingWrapper(
     TimedExecutor& executor, unique_ptr<BinaryTreeNode<int>>& tree) {
@@ -71,7 +68,6 @@ std::vector<std::vector<int>> ConstructRightSiblingWrapper(
 int main(int argc, char* argv[]) {
   std::vector<std::string> args {argv + 1, argv + argc};
   std::vector<std::string> param_names {"executor", "tree"};
-  return GenericTestMain(args, "tree_right_sibling.cc", "tree_right_sibling.tsv", &ConstructRightSiblingWrapper,
-                         DefaultComparator{}, param_names);
+  return GenericTestMain(args, "tree_right_sibling.cc", "tree_right_sibling.tsv", &ConstructRightSiblingWrapper, DefaultComparator{}, param_names);
 }
 // clang-format on

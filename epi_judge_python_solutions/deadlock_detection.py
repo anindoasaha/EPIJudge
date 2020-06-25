@@ -1,5 +1,4 @@
 import functools
-from typing import List
 
 from test_framework import generic_test
 from test_framework.test_utils import enable_executor_hook
@@ -9,14 +8,14 @@ class GraphVertex:
 
     WHITE, GRAY, BLACK = range(3)
 
-    def __init__(self) -> None:
+    def __init__(self):
 
         self.color = GraphVertex.WHITE
 
-        self.edges: List['GraphVertex'] = []
+        self.edges = []
 
 
-def is_deadlocked(graph: List[GraphVertex]) -> bool:
+def is_deadlocked(graph):
     def has_cycle(cur):
         # Visiting a gray vertex means a cycle.
         if cur.color == GraphVertex.GRAY:
@@ -50,6 +49,6 @@ def is_deadlocked_wrapper(executor, num_nodes, edges):
 
 if __name__ == '__main__':
     exit(
-        generic_test.generic_test_main('deadlock_detection.py',
+        generic_test.generic_test_main("deadlock_detection.py",
                                        'deadlock_detection.tsv',
                                        is_deadlocked_wrapper))

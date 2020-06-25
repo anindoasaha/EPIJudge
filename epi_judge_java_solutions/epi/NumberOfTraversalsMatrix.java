@@ -31,22 +31,21 @@ public class NumberOfTraversalsMatrix {
     return numberOfWays[x][y];
   }
 
-  private static int numberOfWaysSpaceEfficient(int n, int m) {
+  private static int computeNumberOfWaysSpaceEfficient(int n, int m) {
     if (n < m) {
       int temp = n;
       n = m;
       m = temp;
     }
-
-    List<Integer> table = new ArrayList<>(Collections.nCopies(m, 1));
+    List<Integer> A = new ArrayList<>(Collections.nCopies(m, 1));
     for (int i = 1; i < n; ++i) {
       int prevRes = 0;
       for (int j = 0; j < m; ++j) {
-        table.set(j, table.get(j) + prevRes);
-        prevRes = table.get(j);
+        A.set(j, A.get(j) + prevRes);
+        prevRes = A.get(j);
       }
     }
-    return table.get(m - 1);
+    return A.get(m - 1);
   }
 
   public static void main(String[] args) {

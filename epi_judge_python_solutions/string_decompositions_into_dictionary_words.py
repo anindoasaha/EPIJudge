@@ -1,10 +1,9 @@
 import collections
-from typing import List
 
 from test_framework import generic_test
 
 
-def find_all_substrings(s: str, words: List[str]) -> List[int]:
+def find_all_substrings(s, words):
     def match_all_words_in_dict(start):
         curr_string_to_freq = collections.Counter()
         for i in range(start, start + len(words) * unit_size, unit_size):
@@ -29,6 +28,6 @@ def find_all_substrings(s: str, words: List[str]) -> List[int]:
 if __name__ == '__main__':
     exit(
         generic_test.generic_test_main(
-            'string_decompositions_into_dictionary_words.py',
+            "string_decompositions_into_dictionary_words.py",
             'string_decompositions_into_dictionary_words.tsv',
             find_all_substrings))

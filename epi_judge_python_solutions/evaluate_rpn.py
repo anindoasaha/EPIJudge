@@ -1,22 +1,20 @@
-from typing import List
-
 from test_framework import generic_test
 
 
-def evaluate(expression: str) -> int:
+def evaluate(expression):
 
-    intermediate_results: List[int] = []
-    delimiter = ','
-    operators = {
+    intermediate_results = []
+    DELIMITER = ','
+    OPERATORS = {
         '+': lambda y, x: x + y,
         '-': lambda y, x: x - y,
         '*': lambda y, x: x * y,
-        '/': lambda y, x: x // y
+        '/': lambda y, x: int(x / y)
     }
 
-    for token in expression.split(delimiter):
-        if token in operators:
-            intermediate_results.append(operators[token](
+    for token in expression.split(DELIMITER):
+        if token in OPERATORS:
+            intermediate_results.append(OPERATORS[token](
                 intermediate_results.pop(), intermediate_results.pop()))
         else:  # token is a number.
             intermediate_results.append(int(token))
@@ -25,5 +23,5 @@ def evaluate(expression: str) -> int:
 
 if __name__ == '__main__':
     exit(
-        generic_test.generic_test_main('evaluate_rpn.py', 'evaluate_rpn.tsv',
+        generic_test.generic_test_main("evaluate_rpn.py", 'evaluate_rpn.tsv',
                                        evaluate))

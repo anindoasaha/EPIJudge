@@ -15,8 +15,7 @@ public class EnumerateBalancedParentheses {
   public static List<String> generateBalancedParentheses(int numPairs) {
 
     List<String> result = new ArrayList<>();
-    directedGenerateBalancedParentheses(numPairs, numPairs, /*validPrefix=*/"",
-                                        result);
+    directedGenerateBalancedParentheses(numPairs, numPairs, "", result);
     return result;
   }
 
@@ -42,14 +41,15 @@ public class EnumerateBalancedParentheses {
   }
 
   @EpiTestComparator
-  public static boolean comp(List<String> expected, List<String> result) {
+  public static BiPredicate<List<String>, List<String>> comp =
+      (expected, result) -> {
     if (result == null) {
       return false;
     }
     Collections.sort(expected);
     Collections.sort(result);
     return expected.equals(result);
-  }
+  };
 
   public static void main(String[] args) {
     System.exit(

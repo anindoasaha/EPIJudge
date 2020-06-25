@@ -1,5 +1,4 @@
 #include <vector>
-
 #include "test_framework/generic_test.h"
 using std::vector;
 double BuyAndSellStockOnce(const vector<double>& prices) {

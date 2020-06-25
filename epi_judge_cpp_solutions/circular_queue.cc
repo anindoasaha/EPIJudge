@@ -30,6 +30,9 @@ class Queue {
   }
 
   int Dequeue() {
+    if (!num_queue_elements) {
+      throw length_error("empty queue");
+    }
     --num_queue_elements;
     int result = entries_[head_];
     head_ = (head_ + 1) % size(entries_);
@@ -45,18 +48,18 @@ class Queue {
 };
 
 struct QueueOp {
-  enum class Operation { kConstruct, kDequeue, kEnqueue, kSize } op;
+  enum { kConstruct, kDequeue, kEnqueue, kSize } op;
   int argument;
 
   QueueOp(const std::string& op_string, int arg) : argument(arg) {
     if (op_string == "Queue") {
-      op = Operation::kConstruct;
+      op = kConstruct;
     } else if (op_string == "dequeue") {
-      op = Operation::kDequeue;
+      op = kDequeue;
     } else if (op_string == "enqueue") {
-      op = Operation::kEnqueue;
+      op = kEnqueue;
     } else if (op_string == "size") {
-      op = Operation::kSize;
+      op = kSize;
     } else {
       throw std::runtime_error("Unsupported queue operation: " + op_string);
     }
@@ -64,22 +67,22 @@ struct QueueOp {
 
   void execute(Queue& q) const {
     switch (op) {
-      case Operation::kConstruct:
+      case kConstruct:
         // Hack to bypass deleted assign operator
         q.~Queue();
         new (&q) Queue(argument);
         break;
-      case Operation::kDequeue: {
+      case kDequeue: {
         int result = q.Dequeue();
         if (result != argument) {
           throw TestFailure("Dequeue: expected " + std::to_string(argument) +
                             ", got " + std::to_string(result));
         }
       } break;
-      case Operation::kEnqueue:
+      case kEnqueue:
         q.Enqueue(argument);
         break;
-      case Operation::kSize: {
+      case kSize: {
         int s = q.Size();
         if (s != argument) {
           throw TestFailure("Size: expected " + std::to_string(argument) +
@@ -90,10 +93,9 @@ struct QueueOp {
   }
 };
 
-namespace test_framework {
 template <>
-struct SerializationTrait<QueueOp> : UserSerTrait<QueueOp, std::string, int> {};
-}  // namespace test_framework
+struct SerializationTraits<QueueOp> : UserSerTraits<QueueOp, std::string, int> {
+};
 
 void QueueTester(const std::vector<QueueOp>& ops) {
   Queue q(0);
@@ -102,13 +104,9 @@ void QueueTester(const std::vector<QueueOp>& ops) {
   }
 }
 
-// clang-format off
-
-
 int main(int argc, char* argv[]) {
-  std::vector<std::string> args {argv + 1, argv + argc};
-  std::vector<std::string> param_names {"ops"};
-  return GenericTestMain(args, "circular_queue.cc", "circular_queue.tsv", &QueueTester,
-                         DefaultComparator{}, param_names);
+  std::vector<std::string> args{argv + 1, argv + argc};
+  std::vector<std::string> param_names{"ops"};
+  return GenericTestMain(args, "circular_queue.cc", "circular_queue.tsv",
+                         &QueueTester, DefaultComparator{}, param_names);
 }
-// clang-format on

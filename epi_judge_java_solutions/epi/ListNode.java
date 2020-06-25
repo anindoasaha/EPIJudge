@@ -1,14 +1,16 @@
 
 package epi;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
+import java.util.List;
+import java.util.ArrayList;
+
 
 public class ListNode<T> {
   public T data;
   public ListNode<T> next;
+  
 
   public ListNode(T data, ListNode<T> next) {
     this.data = data;
@@ -88,7 +90,6 @@ public class ListNode<T> {
     return a == null && b == null;
   }
 
-  // TODO: Factor out this function like C++ and Python by taking a parameter.
   public int size() {
     int result = 0;
     Set<ListNode<T>> visited = new HashSet<ListNode<T>>();
@@ -101,4 +102,6 @@ public class ListNode<T> {
     }
     return result;
   }
+  
 }
+

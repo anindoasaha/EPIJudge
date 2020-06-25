@@ -24,16 +24,16 @@ bool IsBalanced(const unique_ptr<BinaryTreeNode<int>>& tree) {
 BalancedStatusWithHeight CheckBalanced(
     const unique_ptr<BinaryTreeNode<int>>& tree) {
   if (tree == nullptr) {
-    return {/*balanced=*/true, /*height=*/-1};
+    return {true, -1};  // Base case.
   }
 
   auto left_result = CheckBalanced(tree->left);
   if (!left_result.balanced) {
-    return left_result;
+    return {false, 0};  // Left subtree is not balanced.
   }
   auto right_result = CheckBalanced(tree->right);
   if (!right_result.balanced) {
-    return right_result;
+    return {false, 0};  // Right subtree is not balanced.
   }
 
   bool is_balanced = abs(left_result.height - right_result.height) <= 1;

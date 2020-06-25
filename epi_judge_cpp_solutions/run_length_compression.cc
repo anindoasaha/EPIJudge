@@ -44,13 +44,10 @@ void RleTester(const string &encoded, const string &decoded) {
   }
 }
 
-// clang-format off
-
-
-int main(int argc, char* argv[]) {
-  std::vector<std::string> args {argv + 1, argv + argc};
-  std::vector<std::string> param_names {"encoded", "decoded"};
-  return GenericTestMain(args, "run_length_compression.cc", "run_length_compression.tsv", &RleTester,
+int main(int argc, char *argv[]) {
+  std::vector<std::string> args{argv + 1, argv + argc};
+  std::vector<std::string> param_names{"encoded", "decoded"};
+  return GenericTestMain(args, "run_length_compression.cc",
+                         "run_length_compression.tsv", &RleTester,
                          DefaultComparator{}, param_names);
 }
-// clang-format on

@@ -9,7 +9,6 @@
 #include "test_framework/test_failure.h"
 
 using std::unique_ptr;
-using test_framework::BinaryTreeSerializationTrait;
 
 template <typename T>
 struct BinaryTreeNode {
@@ -36,38 +35,39 @@ const BinaryTreeNode<int>* FindKthNodeBinaryTree(
   return nullptr;
 }
 
-namespace test_framework {
 template <typename KeyT>
-struct SerializationTrait<std::unique_ptr<BinaryTreeNode<KeyT>>>
-    : BinaryTreeSerializationTrait<std::unique_ptr<BinaryTreeNode<KeyT>>,
-                                   false> {
+struct SerializationTraits<std::unique_ptr<BinaryTreeNode<KeyT>>>
+    : BinaryTreeSerializationTraits<std::unique_ptr<BinaryTreeNode<KeyT>>,
+                                    false> {
   using serialization_type = std::unique_ptr<BinaryTreeNode<KeyT>>;
   using base =
-      BinaryTreeSerializationTrait<std::unique_ptr<BinaryTreeNode<KeyT>>,
-                                   false>;
+      BinaryTreeSerializationTraits<std::unique_ptr<BinaryTreeNode<KeyT>>,
+                                    false>;
+  static serialization_type Parse(const std::string& str) {
+    auto tree = base::Parse(str);
+    InitSize(tree);
+    return std::move(tree);
+  }
 
-  static serialization_type Parse(const json& json_object) {
-    auto tree = base::Parse(json_object);
+  static serialization_type JsonParse(const json_parser::Json& json_object) {
+    auto tree = base::JsonParse(json_object);
     InitSize(tree);
     return std::move(tree);
   }
 
  private:
   static int InitSize(const serialization_type& node) {
-    if (!node) {
-      return 0;
-    }
+    if (!node) return 0;
     node->size = 1 + InitSize(node->left) + InitSize(node->right);
     return node->size;
   }
 };
 
-namespace meta {
+namespace detail {
 template <typename KeyT>
 struct IsBinaryTreeImpl<std::unique_ptr<BinaryTreeNode<KeyT>>>
     : std::true_type {};
-}  // namespace meta
-}  // namespace test_framework
+}  // namespace detail
 
 int FindKthNodeBinaryTreeWrapper(const unique_ptr<BinaryTreeNode<int>>& tree,
                                  int k) {

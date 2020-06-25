@@ -22,6 +22,10 @@ class Queue {
         enqueue_.pop();
       }
     }
+
+    if (empty(dequeue_)) {  // dequeue_ is still empty!
+      throw length_error("empty queue");
+    }
     int result = dequeue_.top();
     dequeue_.pop();
     return result;
@@ -32,35 +36,34 @@ class Queue {
 };
 
 struct QueueOp {
-  enum class Operation { kConstruct, kDequeue, kEnqueue } op;
+  enum { kConstruct, kDequeue, kEnqueue } op;
   int argument;
 
   QueueOp(const std::string& op_string, int arg) : argument(arg) {
     if (op_string == "Queue") {
-      op = Operation::kConstruct;
+      op = kConstruct;
     } else if (op_string == "dequeue") {
-      op = Operation::kDequeue;
+      op = kDequeue;
     } else if (op_string == "enqueue") {
-      op = Operation::kEnqueue;
+      op = kEnqueue;
     } else {
       throw std::runtime_error("Unsupported queue operation: " + op_string);
     }
   }
 };
 
-namespace test_framework {
 template <>
-struct SerializationTrait<QueueOp> : UserSerTrait<QueueOp, std::string, int> {};
-}  // namespace test_framework
+struct SerializationTraits<QueueOp> : UserSerTraits<QueueOp, std::string, int> {
+};
 
 void QueueTester(const std::vector<QueueOp>& ops) {
   try {
     Queue q;
     for (auto& x : ops) {
       switch (x.op) {
-        case QueueOp::Operation::kConstruct:
+        case QueueOp::kConstruct:
           break;
-        case QueueOp::Operation::kDequeue: {
+        case QueueOp::kDequeue: {
           int result = q.Dequeue();
           if (result != x.argument) {
             throw TestFailure("Dequeue: expected " +
@@ -68,7 +71,7 @@ void QueueTester(const std::vector<QueueOp>& ops) {
                               std::to_string(result));
           }
         } break;
-        case QueueOp::Operation::kEnqueue:
+        case QueueOp::kEnqueue:
           q.Enqueue(x.argument);
           break;
       }
@@ -78,13 +81,9 @@ void QueueTester(const std::vector<QueueOp>& ops) {
   }
 }
 
-// clang-format off
-
-
 int main(int argc, char* argv[]) {
-  std::vector<std::string> args {argv + 1, argv + argc};
-  std::vector<std::string> param_names {"ops"};
-  return GenericTestMain(args, "queue_from_stacks.cc", "queue_from_stacks.tsv", &QueueTester,
-                         DefaultComparator{}, param_names);
+  std::vector<std::string> args{argv + 1, argv + argc};
+  std::vector<std::string> param_names{"ops"};
+  return GenericTestMain(args, "queue_from_stacks.cc", "queue_from_stacks.tsv",
+                         &QueueTester, DefaultComparator{}, param_names);
 }
-// clang-format on

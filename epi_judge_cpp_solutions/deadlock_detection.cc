@@ -11,32 +11,31 @@ struct GraphVertex;
 bool HasCycle(GraphVertex*);
 
 struct GraphVertex {
-  enum class Color { kWhite, kGray, kBlack } color = Color::kWhite;
+  enum Color { kWhite, kGray, kBlack } color = kWhite;
 
   vector<GraphVertex*> edges;
 };
 
 bool IsDeadlocked(vector<GraphVertex>* graph) {
   return any_of(begin(*graph), end(*graph), [](GraphVertex& vertex) {
-    return vertex.color == GraphVertex::Color::kWhite && HasCycle(&vertex);
+    return vertex.color == GraphVertex::kWhite && HasCycle(&vertex);
   });
 }
 
 bool HasCycle(GraphVertex* cur) {
   // Visiting a gray vertex means a cycle.
-  if (cur->color == GraphVertex::Color::kGray) {
+  if (cur->color == GraphVertex::kGray) {
     return true;
   }
 
-  cur->color =
-      GraphVertex::Color::kGray;  // Marks current vertex as a gray one.
+  cur->color = GraphVertex::kGray;  // Marks current vertex as a gray one.
   // Traverse the neighbor vertices.
   for (GraphVertex*& next : cur->edges) {
-    if (next->color != GraphVertex::Color::kBlack && HasCycle(next)) {
+    if (next->color != GraphVertex::kBlack && HasCycle(next)) {
       return true;
     }
   }
-  cur->color = GraphVertex::Color::kBlack;  // Marks current vertex as black.
+  cur->color = GraphVertex::kBlack;  // Marks current vertex as black.
   return false;
 }
 
@@ -45,10 +44,8 @@ struct Edge {
   int to;
 };
 
-namespace test_framework {
 template <>
-struct SerializationTrait<Edge> : UserSerTrait<Edge, int, int> {};
-}  // namespace test_framework
+struct SerializationTraits<Edge> : UserSerTraits<Edge, int, int> {};
 
 bool HasCycleWrapper(TimedExecutor& executor, int num_nodes,
                      const vector<Edge>& edges) {

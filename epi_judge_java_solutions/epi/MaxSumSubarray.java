@@ -10,12 +10,17 @@ public class MaxSumSubarray {
 
   public static int findMaximumSubarray(List<Integer> A) {
 
-    int maxSeen = 0, maxEnd = 0;
-    for (int a : A) {
-      maxEnd = Math.max(a, a + maxEnd);
-      maxSeen = Math.max(maxSeen, maxEnd);
+    int minSum = 0, runningSum = 0, maxSum = 0;
+    for (int i = 0; i < A.size(); ++i) {
+      runningSum += A.get(i);
+      if (runningSum < minSum) {
+        minSum = runningSum;
+      }
+      if (runningSum - minSum > maxSum) {
+        maxSum = runningSum - minSum;
+      }
     }
-    return maxSeen;
+    return maxSum;
   }
 
   public static void main(String[] args) {

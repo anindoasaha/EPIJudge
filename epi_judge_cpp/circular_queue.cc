@@ -18,18 +18,18 @@ class Queue {
   }
 };
 struct QueueOp {
-  enum class Operation { kConstruct, kDequeue, kEnqueue, kSize } op;
+  enum { kConstruct, kDequeue, kEnqueue, kSize } op;
   int argument;
 
   QueueOp(const std::string& op_string, int arg) : argument(arg) {
     if (op_string == "Queue") {
-      op = Operation::kConstruct;
+      op = kConstruct;
     } else if (op_string == "dequeue") {
-      op = Operation::kDequeue;
+      op = kDequeue;
     } else if (op_string == "enqueue") {
-      op = Operation::kEnqueue;
+      op = kEnqueue;
     } else if (op_string == "size") {
-      op = Operation::kSize;
+      op = kSize;
     } else {
       throw std::runtime_error("Unsupported queue operation: " + op_string);
     }
@@ -37,22 +37,22 @@ struct QueueOp {
 
   void execute(Queue& q) const {
     switch (op) {
-      case Operation::kConstruct:
+      case kConstruct:
         // Hack to bypass deleted assign operator
         q.~Queue();
         new (&q) Queue(argument);
         break;
-      case Operation::kDequeue: {
+      case kDequeue: {
         int result = q.Dequeue();
         if (result != argument) {
           throw TestFailure("Dequeue: expected " + std::to_string(argument) +
                             ", got " + std::to_string(result));
         }
       } break;
-      case Operation::kEnqueue:
+      case kEnqueue:
         q.Enqueue(argument);
         break;
-      case Operation::kSize: {
+      case kSize: {
         int s = q.Size();
         if (s != argument) {
           throw TestFailure("Size: expected " + std::to_string(argument) +
@@ -63,10 +63,9 @@ struct QueueOp {
   }
 };
 
-namespace test_framework {
 template <>
-struct SerializationTrait<QueueOp> : UserSerTrait<QueueOp, std::string, int> {};
-}  // namespace test_framework
+struct SerializationTraits<QueueOp> : UserSerTraits<QueueOp, std::string, int> {
+};
 
 void QueueTester(const std::vector<QueueOp>& ops) {
   Queue q(0);

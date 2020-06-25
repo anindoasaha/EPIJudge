@@ -3,7 +3,6 @@
 #include <memory>
 #include <string>
 #include <vector>
-
 #include "test_framework/generic_test.h"
 
 using std::make_unique;
@@ -15,25 +14,26 @@ bool IsPalindrome(const string&);
 void DirectedPalindromeDecompositions(const string&, int, vector<string>*,
                                       vector<vector<string>>*);
 
-vector<vector<string>> PalindromeDecompositions(const string& text) {
+vector<vector<string>> PalindromeDecompositions(const string& input) {
   vector<vector<string>> result;
   DirectedPalindromeDecompositions(
-      text, /*offset=*/0, make_unique<vector<string>>().get(), &result);
+      input, 0, make_unique<vector<string>>().get(), &result);
   return result;
 }
 
-void DirectedPalindromeDecompositions(const string& text, int offset,
+void DirectedPalindromeDecompositions(const string& input, int offset,
                                       vector<string>* partial_partition,
                                       vector<vector<string>>* result) {
-  if (offset == size(text)) {
+  if (offset == size(input)) {
     result->emplace_back(*partial_partition);
     return;
   }
 
-  for (int i = offset + 1; i <= size(text); ++i) {
-    if (string prefix = text.substr(offset, i - offset); IsPalindrome(prefix)) {
+  for (int i = offset + 1; i <= size(input); ++i) {
+    if (string prefix = input.substr(offset, i - offset);
+        IsPalindrome(prefix)) {
       partial_partition->emplace_back(prefix);
-      DirectedPalindromeDecompositions(text, i, partial_partition, result);
+      DirectedPalindromeDecompositions(input, i, partial_partition, result);
       partial_partition->pop_back();
     }
   }
@@ -59,8 +59,7 @@ bool Comp(vector<vector<string>> expected, vector<vector<string>> result) {
 
 int main(int argc, char* argv[]) {
   std::vector<std::string> args {argv + 1, argv + argc};
-  std::vector<std::string> param_names {"text"};
-  return GenericTestMain(args, "enumerate_palindromic_decompositions.cc", "enumerate_palindromic_decompositions.tsv", &PalindromeDecompositions,
-                         &Comp, param_names);
+  std::vector<std::string> param_names {"input"};
+  return GenericTestMain(args, "enumerate_palindromic_decompositions.cc", "enumerate_palindromic_decompositions.tsv", &PalindromeDecompositions, &Comp, param_names);
 }
 // clang-format on

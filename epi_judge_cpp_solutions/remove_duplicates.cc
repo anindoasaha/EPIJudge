@@ -31,11 +31,9 @@ void EliminateDuplicate(vector<Name>* names) {
   names->erase(unique(begin(*names), end(*names)), end(*names));
 }
 
-namespace test_framework {
 template <>
-struct SerializationTrait<Name> : UserSerTrait<Name, std::string, std::string> {
-};
-}  // namespace test_framework
+struct SerializationTraits<Name>
+    : UserSerTraits<Name, std::string, std::string> {};
 
 std::ostream& operator<<(std::ostream& out, const Name& n) {
   return out << n.first_name;
@@ -54,13 +52,9 @@ bool Comp(vector<std::string> expected, vector<Name> result) {
       [](const std::string& s, const Name& n) { return s == n.first_name; });
 }
 
-// clang-format off
-
-
 int main(int argc, char* argv[]) {
-  std::vector<std::string> args {argv + 1, argv + argc};
-  std::vector<std::string> param_names {"names"};
-  return GenericTestMain(args, "remove_duplicates.cc", "remove_duplicates.tsv", &EliminateDuplicateWrapper,
-                         &Comp, param_names);
+  std::vector<std::string> args{argv + 1, argv + argc};
+  std::vector<std::string> param_names{"names"};
+  return GenericTestMain(args, "remove_duplicates.cc", "remove_duplicates.tsv",
+                         &EliminateDuplicateWrapper, &Comp, param_names);
 }
-// clang-format on

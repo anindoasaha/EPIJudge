@@ -48,10 +48,8 @@ struct Edge {
   int to;
 };
 
-namespace test_framework {
 template <>
-struct SerializationTrait<Edge> : UserSerTrait<Edge, int, int> {};
-}  // namespace test_framework
+struct SerializationTraits<Edge> : UserSerTraits<Edge, int, int> {};
 
 bool IsAnyPlacementFeasibleWrapper(TimedExecutor& executor, int k,
                                    const vector<Edge>& edges) {

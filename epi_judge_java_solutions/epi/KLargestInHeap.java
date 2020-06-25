@@ -57,14 +57,15 @@ public class KLargestInHeap {
   }
 
   @EpiTestComparator
-  public static boolean comp(List<Integer> expected, List<Integer> result) {
+  public static BiPredicate<List<Integer>, List<Integer>> comp =
+      (expected, result) -> {
     if (result == null) {
       return false;
     }
     Collections.sort(expected);
     Collections.sort(result);
     return expected.equals(result);
-  }
+  };
 
   public static void main(String[] args) {
     System.exit(

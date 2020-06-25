@@ -1,5 +1,4 @@
 #include <vector>
-
 #include "test_framework/generic_test.h"
 using std::vector;
 vector<vector<int>> GeneratePascalTriangle(int num_rows) {

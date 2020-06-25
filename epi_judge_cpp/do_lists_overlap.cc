@@ -1,6 +1,5 @@
 #include <set>
 #include <stdexcept>
-
 #include "list_node.h"
 #include "test_framework/generic_test.h"
 #include "test_framework/test_failure.h"

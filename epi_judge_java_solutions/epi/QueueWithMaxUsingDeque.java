@@ -29,14 +29,22 @@ public class QueueWithMaxUsingDeque {
     }
 
     public T dequeue() {
-      T result = entries.remove();
-      if (result.equals(candidatesForMax.peekFirst())) {
-        candidatesForMax.removeFirst();
+      if (!entries.isEmpty()) {
+        T result = entries.remove();
+        if (result.equals(candidatesForMax.peekFirst())) {
+          candidatesForMax.removeFirst();
+        }
+        return result;
       }
-      return result;
+      throw new NoSuchElementException("Called dequeue() on empty queue.");
     }
 
-    public T max() { return candidatesForMax.peekFirst(); }
+    public T max() {
+      if (!candidatesForMax.isEmpty()) {
+        return candidatesForMax.peekFirst();
+      }
+      throw new NoSuchElementException("empty queue");
+    }
 
     public T head() { return entries.peek(); }
   }
@@ -53,7 +61,7 @@ public class QueueWithMaxUsingDeque {
   }
 
   @EpiTest(testDataFile = "queue_with_max.tsv")
-  public static void queueTester(List<QueueOp> ops) throws TestFailure {
+  public static void queueTest(List<QueueOp> ops) throws TestFailure {
     try {
       QueueWithMax<Integer> q = new QueueWithMax<>();
 

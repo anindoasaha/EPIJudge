@@ -4,7 +4,7 @@ import string
 from test_framework import generic_test
 
 
-def convert_base(num_as_string: str, b1: int, b2: int) -> str:
+def convert_base(num_as_string, b1, b2):
     def construct_from_base(num_as_int, base):
         return ('' if num_as_int == 0 else
                 construct_from_base(num_as_int // base, base) +
@@ -20,5 +20,5 @@ def convert_base(num_as_string: str, b1: int, b2: int) -> str:
 
 if __name__ == '__main__':
     exit(
-        generic_test.generic_test_main('convert_base.py', 'convert_base.tsv',
+        generic_test.generic_test_main("convert_base.py", "convert_base.tsv",
                                        convert_base))

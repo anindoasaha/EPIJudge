@@ -1,6 +1,5 @@
 #include <stdexcept>
 #include <vector>
-
 #include "test_framework/generic_test.h"
 #include "test_framework/test_failure.h"
 using std::invalid_argument;
@@ -11,14 +10,11 @@ int FindMissingElement(vector<int>::const_iterator stream_begin,
   // TODO - you fill in here.
   return 0;
 }
-void FindMissingElementWrapper(const vector<int>& stream) {
+int FindMissingElementWrapper(const vector<int>& stream) {
   try {
-    int res = FindMissingElement(cbegin(stream), cend(stream));
-    if (std::find(stream.begin(), stream.end(), res) != stream.end()) {
-      throw TestFailure(std::to_string(res) + " appears in stream");
-    }
+    return FindMissingElement(cbegin(stream), cend(stream));
   } catch (invalid_argument&) {
-    throw TestFailure("Unexpected no missing element exception");
+    throw TestFailure("Unexpected no_missing_element exception");
   }
 }
 

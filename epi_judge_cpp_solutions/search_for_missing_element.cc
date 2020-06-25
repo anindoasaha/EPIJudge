@@ -42,11 +42,9 @@ DuplicateAndMissing FindDuplicateMissing(const vector<int>& A) {
   return {miss_or_dup ^ miss_XOR_dup, miss_or_dup};
 }
 
-namespace test_framework {
 template <>
-struct SerializationTrait<DuplicateAndMissing>
-    : UserSerTrait<DuplicateAndMissing, int, int> {};
-}  // namespace test_framework
+struct SerializationTraits<DuplicateAndMissing>
+    : UserSerTraits<DuplicateAndMissing, int, int> {};
 
 bool operator==(const DuplicateAndMissing& lhs,
                 const DuplicateAndMissing& rhs) {

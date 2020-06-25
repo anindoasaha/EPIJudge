@@ -33,7 +33,8 @@ GraphVertex* CloneGraph(GraphVertex* graph) {
     q.pop();
     for (GraphVertex* e : v->edges) {
       // Try to copy vertex e.
-      if (vertex_map.emplace(e, new GraphVertex({e->label})).second) {
+      if (!vertex_map.count(e)) {
+        vertex_map.emplace(e, new GraphVertex({e->label}));
         q.emplace(e);
       }
       // Copy edge.
@@ -73,7 +74,8 @@ void CheckGraph(GraphVertex* node, const vector<GraphVertex>& graph) {
       throw TestFailure("Edges mismatch");
     }
     for (GraphVertex* e : vertex->edges) {
-      if (vertex_set.emplace(e).second) {
+      if (!vertex_set.count(e)) {
+        vertex_set.emplace(e);
         q.emplace(e);
       }
     }
@@ -88,10 +90,8 @@ struct Edge {
   int to;
 };
 
-namespace test_framework {
 template <>
-struct SerializationTrait<Edge> : UserSerTrait<Edge, int, int> {};
-}  // namespace test_framework
+struct SerializationTraits<Edge> : UserSerTraits<Edge, int, int> {};
 
 void CloneGraphTest(int k, const vector<Edge>& edges) {
   vector<GraphVertex> graph;

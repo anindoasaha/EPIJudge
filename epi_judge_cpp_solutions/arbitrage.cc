@@ -2,7 +2,6 @@
 #include <cmath>
 #include <limits>
 #include <vector>
-
 #include "test_framework/generic_test.h"
 
 using std::numeric_limits;
@@ -22,14 +21,14 @@ bool IsArbitrageExist(vector<vector<double>> graph) {
 }
 
 bool BellmanFord(const vector<vector<double>>& graph, int source) {
-  vector<double> dis_to_source(size(graph), numeric_limits<double>::infinity());
+  vector<double> dis_to_source(size(graph), numeric_limits<double>::max());
   dis_to_source[source] = 0;
 
   for (int times = 1; times < size(graph); ++times) {
     bool have_update = false;
     for (int i = 0; i < size(graph); ++i) {
       for (int j = 0; j < size(graph[i]); ++j) {
-        if (dis_to_source[i] != numeric_limits<double>::infinity() &&
+        if (dis_to_source[i] != numeric_limits<double>::max() &&
             dis_to_source[j] > dis_to_source[i] + graph[i][j]) {
           have_update = true;
           dis_to_source[j] = dis_to_source[i] + graph[i][j];
@@ -46,7 +45,7 @@ bool BellmanFord(const vector<vector<double>>& graph, int source) {
   // Detects cycle if there is any further update.
   for (int i = 0; i < size(graph); ++i) {
     for (int j = 0; j < size(graph[i]); ++j) {
-      if (dis_to_source[i] != numeric_limits<double>::infinity() &&
+      if (dis_to_source[i] != numeric_limits<double>::max() &&
           dis_to_source[j] > dis_to_source[i] + graph[i][j]) {
         return true;
       }

@@ -39,10 +39,8 @@ MinMax FindMinMax(const vector<int>& A) {
   return {global_min, global_max};
 }
 
-namespace test_framework {
 template <>
-struct SerializationTrait<MinMax> : UserSerTrait<MinMax, int, int> {};
-}  // namespace test_framework
+struct SerializationTraits<MinMax> : UserSerTraits<MinMax, int, int> {};
 
 bool operator==(const MinMax& lhs, const MinMax& rhs) {
   return std::tie(lhs.smallest, lhs.largest) ==

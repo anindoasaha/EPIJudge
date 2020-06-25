@@ -47,10 +47,9 @@ vector<Star> FindClosestKStars(vector<Star>::const_iterator stars_begin,
   return {rbegin(closest_stars), rend(closest_stars)};
 }
 
-namespace test_framework {
 template <>
-struct SerializationTrait<Star> : UserSerTrait<Star, double, double, double> {};
-}  // namespace test_framework
+struct SerializationTraits<Star> : UserSerTraits<Star, double, double, double> {
+};
 
 std::ostream& operator<<(std::ostream& out, const Star& s) {
   return out << s.Distance();
@@ -75,13 +74,9 @@ vector<Star> FindClosestKStarsWrapper(const vector<Star>& stars, int k) {
   return FindClosestKStars(cbegin(stars), cend(stars), k);
 }
 
-// clang-format off
-
-
 int main(int argc, char* argv[]) {
-  std::vector<std::string> args {argv + 1, argv + argc};
-  std::vector<std::string> param_names {"stars", "k"};
-  return GenericTestMain(args, "k_closest_stars.cc", "k_closest_stars.tsv", &FindClosestKStarsWrapper,
-                         &Comp, param_names);
+  std::vector<std::string> args{argv + 1, argv + argc};
+  std::vector<std::string> param_names{"stars", "k"};
+  return GenericTestMain(args, "k_closest_stars.cc", "k_closest_stars.tsv",
+                         &FindClosestKStarsWrapper, &Comp, param_names);
 }
-// clang-format on

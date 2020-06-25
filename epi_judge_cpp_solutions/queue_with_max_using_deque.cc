@@ -26,15 +26,23 @@ class QueueWithMax {
   }
 
   T Dequeue() {
-    T result = entries_.front();
-    if (result == candidates_for_max_.front()) {
-      candidates_for_max_.pop_front();
+    if (!empty(entries_)) {
+      T result = entries_.front();
+      if (result == candidates_for_max_.front()) {
+        candidates_for_max_.pop_front();
+      }
+      entries_.pop();
+      return result;
     }
-    entries_.pop();
-    return result;
+    throw length_error("empty queue");
   }
 
-  const T& Max() const { return candidates_for_max_.front(); }
+  const T& Max() const {
+    if (!empty(candidates_for_max_)) {
+      return candidates_for_max_.front();
+    }
+    throw length_error("empty queue");
+  }
 
   T& Head() { return entries_.front(); }
 
@@ -46,37 +54,36 @@ class QueueWithMax {
 };
 
 struct QueueOp {
-  enum class Operation { kConstruct, kDequeue, kEnqueue, kMax } op;
+  enum { kConstruct, kDequeue, kEnqueue, kMax } op;
   int argument;
 
   QueueOp(const std::string& op_string, int arg) : argument(arg) {
     if (op_string == "QueueWithMax") {
-      op = Operation::kConstruct;
+      op = kConstruct;
     } else if (op_string == "dequeue") {
-      op = Operation::kDequeue;
+      op = kDequeue;
     } else if (op_string == "enqueue") {
-      op = Operation::kEnqueue;
+      op = kEnqueue;
     } else if (op_string == "max") {
-      op = Operation::kMax;
+      op = kMax;
     } else {
       throw std::runtime_error("Unsupported queue operation: " + op_string);
     }
   }
 };
 
-namespace test_framework {
 template <>
-struct SerializationTrait<QueueOp> : UserSerTrait<QueueOp, std::string, int> {};
-}  // namespace test_framework
+struct SerializationTraits<QueueOp> : UserSerTraits<QueueOp, std::string, int> {
+};
 
 void QueueTester(const std::vector<QueueOp>& ops) {
   try {
     QueueWithMax<int> q;
     for (auto& x : ops) {
       switch (x.op) {
-        case QueueOp::Operation::kConstruct:
+        case QueueOp::kConstruct:
           break;
-        case QueueOp::Operation::kDequeue: {
+        case QueueOp::kDequeue: {
           int result = q.Dequeue();
           if (result != x.argument) {
             throw TestFailure("Dequeue: expected " +
@@ -84,10 +91,10 @@ void QueueTester(const std::vector<QueueOp>& ops) {
                               std::to_string(result));
           }
         } break;
-        case QueueOp::Operation::kEnqueue:
+        case QueueOp::kEnqueue:
           q.Enqueue(x.argument);
           break;
-        case QueueOp::Operation::kMax: {
+        case QueueOp::kMax: {
           int s = q.Max();
           if (s != x.argument) {
             throw TestFailure("Max: expected " + std::to_string(x.argument) +
@@ -101,13 +108,10 @@ void QueueTester(const std::vector<QueueOp>& ops) {
   }
 }
 
-// clang-format off
-
-
 int main(int argc, char* argv[]) {
-  std::vector<std::string> args {argv + 1, argv + argc};
-  std::vector<std::string> param_names {"ops"};
-  return GenericTestMain(args, "queue_with_max_using_deque.cc", "queue_with_max.tsv", &QueueTester,
+  std::vector<std::string> args{argv + 1, argv + argc};
+  std::vector<std::string> param_names{"ops"};
+  return GenericTestMain(args, "queue_with_max_using_deque.cc",
+                         "queue_with_max.tsv", &QueueTester,
                          DefaultComparator{}, param_names);
 }
-// clang-format on

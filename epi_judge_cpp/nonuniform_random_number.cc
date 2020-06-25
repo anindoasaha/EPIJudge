@@ -2,7 +2,6 @@
 #include <functional>
 #include <unordered_map>
 #include <vector>
-
 #include "test_framework/generic_test.h"
 #include "test_framework/random_sequence_checker.h"
 #include "test_framework/timed_executor.h"

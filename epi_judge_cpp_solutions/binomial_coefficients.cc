@@ -1,6 +1,5 @@
 #include <memory>
 #include <vector>
-
 #include "test_framework/generic_test.h"
 
 using std::make_unique;
@@ -48,7 +47,6 @@ int ComputeBinomialCoefficientsSpaceEfficient(int n, int k) {
 int main(int argc, char* argv[]) {
   std::vector<std::string> args {argv + 1, argv + argc};
   std::vector<std::string> param_names {"n", "k"};
-  return GenericTestMain(args, "binomial_coefficients.cc", "binomial_coefficients.tsv", &ComputeBinomialCoefficient,
-                         DefaultComparator{}, param_names);
+  return GenericTestMain(args, "binomial_coefficients.cc", "binomial_coefficients.tsv", &ComputeBinomialCoefficient, DefaultComparator{}, param_names);
 }
 // clang-format on

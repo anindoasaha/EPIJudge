@@ -1,9 +1,7 @@
-from typing import List
-
 from test_framework import generic_test
 
 
-def longest_nondecreasing_subsequence_length(A: List[int]) -> int:
+def longest_nondecreasing_subsequence_length(A):
 
     # max_length[i] holds the length of the longest nondecreasing subsequence
     # of A[:i + 1].
@@ -17,6 +15,6 @@ def longest_nondecreasing_subsequence_length(A: List[int]) -> int:
 if __name__ == '__main__':
     exit(
         generic_test.generic_test_main(
-            'longest_nondecreasing_subsequence.py',
+            "longest_nondecreasing_subsequence.py",
             'longest_nondecreasing_subsequence.tsv',
             longest_nondecreasing_subsequence_length))

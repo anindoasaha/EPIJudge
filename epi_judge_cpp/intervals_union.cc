@@ -1,5 +1,4 @@
 #include <vector>
-
 #include "test_framework/generic_test.h"
 #include "test_framework/serialization_traits.h"
 #include "test_framework/timed_executor.h"
@@ -48,11 +47,9 @@ struct FlatInterval {
   }
 };
 
-namespace test_framework {
 template <>
-struct SerializationTrait<FlatInterval>
-    : UserSerTrait<FlatInterval, int, bool, int, bool> {};
-}  // namespace test_framework
+struct SerializationTraits<FlatInterval>
+    : UserSerTraits<FlatInterval, int, bool, int, bool> {};
 
 std::ostream& operator<<(std::ostream& out, const FlatInterval& i) {
   return out << (i.left_is_closed ? '<' : '(') << i.left_val << ", "

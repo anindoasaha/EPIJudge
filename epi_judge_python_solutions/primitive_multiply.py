@@ -1,9 +1,12 @@
 from test_framework import generic_test
 
 
-def multiply(x: int, y: int) -> int:
+def multiply(x, y):
     def add(a, b):
-        return a if b == 0 else add(a ^ b, (a & b) << 1)
+        while b:
+            carry = a & b
+            a, b = a ^ b, carry << 1
+        return a
 
     running_sum = 0
     while x:  # Examines each bit of x.
@@ -15,5 +18,5 @@ def multiply(x: int, y: int) -> int:
 
 if __name__ == '__main__':
     exit(
-        generic_test.generic_test_main('primitive_multiply.py',
+        generic_test.generic_test_main("primitive_multiply.py",
                                        'primitive_multiply.tsv', multiply))
